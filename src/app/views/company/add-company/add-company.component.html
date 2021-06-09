@@ -1,0 +1,729 @@
+<p>add-company works!</p>
+<div class="container">
+    <h1>Add Company</h1>
+    <hr>
+    <div id="stepper1" class="bs-stepper form-horizontal">
+        <div class="bs-stepper-header">
+            <div class="step" data-target="#test-l-1">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">1</span>
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#test-l-2">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">2</span>
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#test-l-3">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">3</span>
+
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#test-l-4">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">4</span>
+
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#test-l-5">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">5</span>
+
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#test-l-6">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">6</span>
+                </button>
+            </div>
+        </div>
+        <div class="bs-stepper-content">
+            <form (ngSubmit)="onSubmit()">
+                <div id="test-l-1" class="content mt-3">
+                    <div class="container bootstrap snippets bootdey">
+                        <h5 class="text-primary"><span
+                                class="glyphicon glyphicon-user"></span>Personal info</h5>
+                        <hr>
+                        <div class="row">
+                            <!-- edit form column -->
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Organization Name:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Legal Name:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Nickname:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">SIC Code:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" control-label">Contact Type:</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Contact Type</option>
+                                                <option value="1">Sponcer</option>
+                                                <option value="2">Team</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Email:</label>
+                                        <div class="">
+                                            <input class="form-control" type="email" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class=" control-label">Current Employer:</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Home</option>
+                                                <option value="1">Billing</option>
+                                                <option value="2">Main</option>
+                                                <option value="1">Other</option>
+                                                <option value="2">Work</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-check mt-4 pr-4">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class=" control-label">On Hold?</label>
+                                    </div>
+                                    <div class="form-check mt-4 pr-4">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class=" control-label">On Hold?</label>
+                                    </div>
+                                    <div class="form-check mt-4 pr-4">
+                                        <input class="form-check-input" type="radio" value=""
+                                            id="flexCheckDefault" checked>
+                                        <label class=" control-label">Primary</label>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Phone:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">ext.</label>
+                                        <div class="ui-select">
+                                            <input class="form-control w-25" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Phone Location</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="Home">Home</option>
+                                                <option value="Billing">Billing</option>
+                                                <option value="Main">Main</option>
+                                                <option value="Other">Other</option>
+                                                <option value="Work">Work</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Phone Location</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="Phone">Phone</option>
+                                                <option value="Mobile">Mobile</option>
+                                                <option value="Fax">Fax</option>
+                                                <option value="Pager">Pager</option>
+                                                <option value="Vicemail">Vicemail</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Instant Messenger:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">IM Location</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="Home">Home</option>
+                                                <option value="Billing">Billing</option>
+                                                <option value="Main">Main</option>
+                                                <option value="Other">Other</option>
+                                                <option value="Work">Work</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">IM Type</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="Yahoo">Yahoo</option>
+                                                <option value="MSN">MSN</option>
+                                                <option value="AIM">AIM</option>
+                                                <option value="GTalk">GTalk</option>
+                                                <option value="Jabber">Jabber</option>
+                                                <option value="Skype">Skype</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Website:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Website Type</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="Work">Work</option>
+                                                <option value="Main">Main</option>
+                                                <option value="Facebook">Facebook</option>
+                                                <option value="Instagram">Instagram</option>
+                                                <option value="LinkedIn">LinkedIn</option>
+                                                <option value="MyScpace">MyScpace</option>
+                                                <option value="Pinterest">Pinterest</option>
+                                                <option value="SnapChat">SnapChat</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Contact Source:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">External ID:</label>
+                                        <div class="ui-select">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Browse/Upload Image:</label>
+                                        <div class="">
+                                            <input class="form-control" type="file" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <button (click)="next()" class="btn btn-primary mt-3 mb-3">Next</button>
+                    </div>
+                </div>
+                <div id="test-l-2" class="content">
+                    <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>
+                        Address</h5>
+                    <hr>
+                    <div class="row mt-5">
+                        <form class="form-horizontal" role="form">
+                            <label class="control-label">Address Location Type:</label>
+                            <div class="d-flex flex-row form-group pr-5">
+                                <div class="ui-select pr-5">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Marital Status</option>
+                                        <option value="Billing">Billing</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Main">Main</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div
+                                    class="form-group pr-5 d-flex flex-row justify-content-between">
+                                    <div class="form-check pr-5">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Primary location for this contact
+                                        </label>
+                                    </div>
+                                    <div class="form-check pr-5">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Billing location for this contact
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Use another contact's address
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Street Address:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Supplemental Address 1:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Supplemental Address 2:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Supplemental Address 3:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">City:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Postal Code:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Country:</label>
+                                        <select class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">India</option>
+                                            <option value="2">Amarica</option>
+                                            <option value="3">China</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">State/Province:</label>
+                                        <select class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>-N/A-</option>
+                                            <option value="1">None found</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">State/Province:</label>
+                                        <select class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>-N/A-</option>
+                                            <option value="1">None found</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Latitude, Longitude:</label>
+                                        <div class="form-group d-flex flex-row form-horizontal">
+                                            <input class="form-control" type="text">&nbsp;<input
+                                                class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+
+                    </div>
+                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
+                </div>
+                <div id="test-l-3" class="content">
+                    <h5 class="text-primary"><span
+                            class="glyphicon glyphicon-user"></span>Communication Preferences
+                    </h5>
+                    <hr>
+                    <div class="row mt-5">
+                        <form class="form-horizontal" role="form">
+                            <label class="control-label">Communication Style:</label>
+                            <div class="d-flex flex-row form-group pr-5">
+                                <div
+                                    class="form-group pr-5 d-flex flex-row justify-content-between">
+                                    <div class="form-check pr-5">
+                                        <input class="form-check-input" type="radio"
+                                            name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Formal
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio"
+                                            name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Familiar
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Email Greeting:</label>
+                                        <select class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>-Select-</option>
+                                            <option value="1">Dear </option>
+                                            <option value="2">Dear </option>
+                                            <option value="3">Dear </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label"> Postal Greeting:</label>
+                                        <div class="form-group">
+                                            <select class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>-Select-</option>
+                                                <option value="1">Dear </option>
+                                                <option value="2">Dear </option>
+                                                <option value="3">Dear </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Addressee:</label>
+                                        <div class="form-group">
+                                            <select class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>-Select-</option>
+                                                <option value="1">Dear </option>
+                                                <option value="2">Dear </option>
+                                                <option value="3">Dear </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">City:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Postal Code:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Privacy:</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Do not phone
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Do not email
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Do not mail
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Do not sms
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Do not trade
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <div class="form-group pr-5">
+                                            <label class="control-label">Preferred Communication
+                                                Method:</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label"
+                                                    for="flexRadioDefault1">
+                                                    Phone
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault2"
+                                                    checked>
+                                                <label class="form-check-label"
+                                                    for="flexRadioDefault2">
+                                                    Email
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault2"
+                                                    checked>
+                                                <label class="form-check-label"
+                                                    for="flexRadioDefault2">
+                                                    Postal Mail
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault2"
+                                                    checked>
+                                                <label class="form-check-label"
+                                                    for="flexRadioDefault2">
+                                                    SMS
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault2"
+                                                    checked>
+                                                <label class="form-check-label"
+                                                    for="flexRadioDefault2">
+                                                    Fax
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Preferred Language:</label>
+                                        <select class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>-N/A-</option>
+                                            <option value="1">None found</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="personal-info">
+                                <form class="d-flex flex-row form-horizontal" role="form">
+                                    <div class="form-check pr-5">
+                                        <input class="form-check-input" type="radio"
+                                            name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            NO BULK EMAILS (User Opt Out)
+                                        </label>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label class="control-label">Email Format:</label>
+                                        <div class="form-group">
+                                            <select class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>Both</option>
+                                                <option value="1">Html</option>
+                                                <option value="2">Text</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
+                </div>
+                <div id="test-l-4" class="content">
+                    <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Notes
+                    </h5>
+                    <hr>
+                    <div class="row mt-5">
+                        <form class="form-horizontal" role="form">
+                            <div class="personal-info">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group pr-5">
+                                        <label for="exampleInputEmail1" class="form-label">
+                                            Subject</label>
+                                        <input type="text" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                                        <div class="form-floating mt-2">
+                                            <textarea class="form-control"
+                                                placeholder="Leave a comment here"
+                                                id="floatingTextarea2"
+                                                style="height: 100px"></textarea>
+                                            <label for="floatingTextarea2">Note</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
+                </div>
+                <div id="test-l-5" class="content">
+                    <h5 class="text-primary"><span
+                            class="glyphicon glyphicon-user"></span>Demographics</h5>
+                    <hr>
+                    <div class="row mt-5">
+                        <form class="form-horizontal" role="form">
+                            <div class="personal-info">
+                                <form class="form-horizontal" role="form">
+                                    <div class="d-flex flex-row form-group pr-5">
+                                        <label for="exampleInputEmail1" class="form-label pr-3">
+                                            Gender</label>
+                                        <div class="form-check pr-3">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Female
+                                            </label>
+                                        </div>
+                                        <div class="form-check pr-3">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <label for="exampleInputEmail1" class="form-label pr-3">
+                                            Birth Date</label>
+                                        <input class="form-control w-25" type="date" value=""
+                                            id="example-date-input">
+                                    </div>
+                                    <div class="form-group pr-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckCheckedDisabled">
+                                            <label class="form-check-label"
+                                                for="flexCheckCheckedDisabled">
+                                                Contact is Deceased
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
+                </div>
+                <div id="test-l-6" class="content">
+                    <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Tags
+                        and Groups</h5>
+                    <hr>
+                    <div class="row mt-5">
+                        <form class="form-horizontal" role="form">
+                            <div class="personal-info">
+                                <form class="form-horizontal" role="form">
+                                    <div class="d-flex flex-row form-group pr-5">
+                                        <div class="form-group w-50">
+                                            <label for="exampleInputEmail1" class="form-label pr-3">
+                                                Tag(s)</label>
+                                            <select class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>-Select-</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group w-50">
+                                            <label for="exampleInputEmail1" class="form-label pr-3">
+                                                Group(s)</label>
+                                            <select class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>-Select-</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-5">Submit Form</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

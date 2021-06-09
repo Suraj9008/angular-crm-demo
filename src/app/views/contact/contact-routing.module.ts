@@ -1,0 +1,42 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { ViewContactDetailsComponent } from './view-contact-details/view-contact-details.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    data: {
+      title: 'contact'
+    },
+    children: [
+      {
+        path: '',
+        redirectTo: 'contact'
+      },
+      {
+        path: 'add-contact',
+        component: AddContactComponent,
+      },
+      {
+        path: 'contact-list',
+        component: ContactListComponent,
+      },
+      {
+        path: 'view-contact-details',
+        component: ViewContactDetailsComponent
+      },
+      {
+        path: 'edit-contact',
+        component: EditContactComponent
+      }
+    ]
+  }
+];
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ContactRoutingModule { }
