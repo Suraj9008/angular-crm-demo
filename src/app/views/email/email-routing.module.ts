@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmailComponent } from './sendEmail/email.component';
+import { EmailComponent } from './email/email.component';
 import { TemplateComponent } from './template/template.component';
 import { NewEmailTemplateComponent } from './new-email-template/new-email-template.component';
 import { MailChimpComponent } from './mail-chimp/mail-chimp.component';
+import { TemplateListComponent } from './template-list/template-list.component';
 
 const routes: Routes = [
   {
@@ -17,23 +18,39 @@ const routes: Routes = [
         redirectTo: 'email'
       },
       {
-        path: 'sendEmail',
+        path: 'email',
         component: EmailComponent,
+        data: {
+          title: 'send greetings'
+        }
       },
       {
         path: 'new-email-template',
         component: NewEmailTemplateComponent,
         data: {
-          title: 'new email template'
+          title: 'add-email-template'
         }
       },
       {
         path: 'template',
-        component: TemplateComponent
+        component: TemplateComponent,
+        data: {
+          title: 'edit template'
+        }
+      },
+      {
+        path: 'template-list',
+        component: TemplateListComponent,
+        data: {
+          title: 'template-list'
+        }
       },
       {
         path: 'mail-chimp',
-        component: MailChimpComponent
+        component: MailChimpComponent,
+        data: {
+          title: 'mail-chimp'
+        }
       }
     ]
   }

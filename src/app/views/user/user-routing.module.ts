@@ -28,20 +28,29 @@ const routes: Routes = [
         path: 'add-user',
         component: AddUserComponent,
         data: {
-          title: 'Add User'
+          title: 'add-user'
         }
       },
       {
         path: 'edit-profile',
-        component: EditProfileComponent
+        component: EditProfileComponent,
+        data: {
+          title: 'edit-profile'
+        }
       },
       {
         path: 'user-role',
-        component: UserRoleComponent
+        component: UserRoleComponent,
+        data: {
+          title: 'user-role'
+        }
       },
       {
         path: 'user-permission',
-        component: UserPermissionComponent
+        component: UserPermissionComponent,
+        data: {
+          title: 'user-permission'
+        }
       }
     ]
   }

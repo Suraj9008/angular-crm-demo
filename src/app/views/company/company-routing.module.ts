@@ -20,18 +20,30 @@ const routes: Routes = [
       {
         path:'add-company',
         component: AddCompanyComponent,
+        data: {
+          title: 'add-company'
+        }
       },
       {
         path:'company-list',
         component: CompanyListComponent,
+        data: {
+          title: 'company-list'
+        }
       },
       {
         path:'edit-company',
         component: EditCompanyComponent,
+        data: {
+          title: 'edit-company'
+        }
       },
       {
         path:'view-company-details',
         component: ViewCompanyDetailsComponent,
+        data: {
+          title: 'view-company-details'
+        }
       }
     ]
   }

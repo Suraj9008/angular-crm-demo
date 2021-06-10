@@ -14,6 +14,7 @@ export const navItems: INavData[] = [
     title: true,
     name: 'Extras',
   },
+  
   {
     name: "Company",
     url: '/company',
@@ -107,30 +108,28 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Send Greetings',
-        url: 'email/sendEmail',
+        url: 'email/email',
         icon: 'icon-envelope'
       },
       {
-        name: 'Template List',
+        name: 'Mail Chimp',
+        url: 'email/mail-chimp',
+        icon: 'fa fa-pencil-square-o',
+      },
+      {
+        name: 'Add New Template',
         url: 'email/new-email-template',
         icon: 'fa fa-address-card-o'
       },
       {
-        name: 'Add New Template',
-        url: 'email/template',
-        icon: 'fa fa-pencil-square-o'
+        name: 'Template List',
+        url: 'email/template-list',
+        icon: 'fa fa-address-card-o'
       },
       {
-        name: 'Integration',
-        url: '/integration',
-        icon: 'fa fa-pencil-square-o',
-        children: [
-          {
-            name: 'Mail Chimp',
-            url: 'integration/mail-chimp',
-            icon: 'fa fa-pencil-square-o'
-          }
-        ]
+        name: 'Edit Template List',
+        url: 'email/template',
+        icon: 'fa fa-address-card-o'
       }
     ]
   },
@@ -174,7 +173,6 @@ export const navItems: INavData[] = [
   {
     divider: true
   },
-
   {
     title: true,
     name: 'Components'
@@ -262,11 +260,6 @@ export const navItems: INavData[] = [
     url: '/buttons',
     icon: 'icon-cursor',
     children: [
-      {
-        name: 'User Profile List',
-        url: '/profiles-list',
-        icon: 'icon-people'
-      },
       {
         name: 'Buttons',
         url: '/buttons/buttons',

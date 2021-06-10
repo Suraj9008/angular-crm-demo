@@ -1,8 +1,8 @@
+
 <div class="container">
     <h1>Add Company</h1>
-    <hr>
-    <div id="stepper1" class="bs-stepper form-horizontal">
-        <div class="bs-stepper-header">
+    <div id="stepper1" class="bs-stepper form-horizontal mt-3 card">
+        <div class="bs-stepper-header card-header">
             <div class="step" data-target="#test-l-1">
                 <button class="step-trigger">
                     <span class="bs-stepper-circle">1</span>
@@ -42,7 +42,7 @@
                 </button>
             </div>
         </div>
-        <div class="bs-stepper-content">
+        <div class="bs-stepper-content card-body">
             <form (ngSubmit)="onSubmit()">
                 <div id="test-l-1" class="content mt-3">
                     <div class="container bootstrap snippets bootdey">
@@ -117,12 +117,7 @@
                                     <div class="form-check mt-4 pr-4">
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="flexCheckDefault">
-                                        <label class=" control-label">On Hold?</label>
-                                    </div>
-                                    <div class="form-check mt-4 pr-4">
-                                        <input class="form-check-input" type="radio" value=""
-                                            id="flexCheckDefault" checked>
-                                        <label class=" control-label">Primary</label>
+                                        <label class=" control-label">Bulk Mailings?</label>
                                     </div>
                                 </form>
                             </div>
@@ -267,7 +262,7 @@
                             <div class="d-flex flex-row form-group pr-5">
                                 <div class="ui-select pr-5">
                                     <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Marital Status</option>
+                                        <option selected>Select Address Type</option>
                                         <option value="Billing">Billing</option>
                                         <option value="Home">Home</option>
                                         <option value="Main">Main</option>
@@ -365,7 +360,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">State/Province:</label>
+                                        <label class="control-label">County:</label>
                                         <select class="form-select"
                                             aria-label="Default select example">
                                             <option selected>-N/A-</option>

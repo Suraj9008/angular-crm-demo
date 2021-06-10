@@ -19,18 +19,30 @@ const routes: Routes = [
       {
         path: 'add-contact',
         component: AddContactComponent,
+        data: {
+          title: 'add-contact'
+        }
       },
       {
         path: 'contact-list',
         component: ContactListComponent,
+        data: {
+          title: 'contact-list'
+        }
       },
       {
         path: 'view-contact-details',
-        component: ViewContactDetailsComponent
+        component: ViewContactDetailsComponent,
+        data: {
+          title: 'view-contact-details'
+        }
       },
       {
         path: 'edit-contact',
-        component: EditContactComponent
+        component: EditContactComponent,
+        data: {
+          title: 'edit-contact'
+        }
       }
     ]
   }
