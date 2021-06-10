@@ -127,10 +127,34 @@ export const navItems: INavData[] = [
         icon: 'fa fa-address-card-o'
       },
       {
-        name: 'Edit Template List',
+        name: 'Edit Template',
         url: 'email/template',
         icon: 'fa fa-address-card-o'
       }
+    ]
+  },
+  {
+    name: "Integration",
+    url: '/integration',
+    icon: 'icon-user',
+    children: [
+      {
+        name: 'Mail Integration',
+        url: '/integration/mail-integration',
+        icon: 'icon-people'
+      },
+    ]
+  },
+  {
+    name: "Loans",
+    url: '/loans',
+    icon: 'icon-user',
+    children: [
+      {
+        name: 'Add Loan',
+        url: '/loans/add-loan',
+        icon: 'icon-people'
+      },
     ]
   },
   {

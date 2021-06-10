@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MailChimpComponent } from './mail-chimp.component';
+import { AddLoanComponent } from './add-loan.component';
 
-describe('MailChimpComponent', () => {
-  let component: MailChimpComponent;
-  let fixture: ComponentFixture<MailChimpComponent>;
+describe('AddLoanComponent', () => {
+  let component: AddLoanComponent;
+  let fixture: ComponentFixture<AddLoanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MailChimpComponent ]
+      declarations: [ AddLoanComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MailChimpComponent);
+    fixture = TestBed.createComponent(AddLoanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

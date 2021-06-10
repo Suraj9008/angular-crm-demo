@@ -21,7 +21,7 @@ const routes: Routes = [
         path: 'email',
         component: EmailComponent,
         data: {
-          title: 'send greetings'
+          title: 'send-greetings'
         }
       },
       {
@@ -35,7 +35,7 @@ const routes: Routes = [
         path: 'template',
         component: TemplateComponent,
         data: {
-          title: 'edit template'
+          title: 'edit-template'
         }
       },
       {
