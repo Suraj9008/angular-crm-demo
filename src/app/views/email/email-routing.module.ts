@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmailComponent } from './sendEmail/email.component';
 import { TemplateComponent } from './template/template.component';
 import { NewEmailTemplateComponent } from './new-email-template/new-email-template.component';
+import { MailChimpComponent } from './mail-chimp/mail-chimp.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'template',
         component: TemplateComponent
+      },
+      {
+        path: 'mail-chimp',
+        component: MailChimpComponent
       }
     ]
   }
@@ -39,4 +44,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EmailRoutingModule {}
+export class EmailRoutingModule { }

@@ -8,11 +8,14 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryService } from '../../country.service';
+import { MailChimpComponent } from './mail-chimp/mail-chimp.component';
+
 @NgModule({
   declarations: [
     EmailComponent,
     TemplateComponent,
-    NewEmailTemplateComponent
+    NewEmailTemplateComponent,
+    MailChimpComponent
   ],
   imports: [
     CommonModule,

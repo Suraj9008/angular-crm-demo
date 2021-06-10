@@ -119,6 +119,18 @@ export const navItems: INavData[] = [
         name: 'Add New Template',
         url: 'email/template',
         icon: 'fa fa-pencil-square-o'
+      },
+      {
+        name: 'Integration',
+        url: '/integration',
+        icon: 'fa fa-pencil-square-o',
+        children: [
+          {
+            name: 'Mail Chimp',
+            url: 'integration/mail-chimp',
+            icon: 'fa fa-pencil-square-o'
+          }
+        ]
       }
     ]
   },
