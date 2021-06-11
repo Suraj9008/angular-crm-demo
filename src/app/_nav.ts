@@ -67,7 +67,19 @@ export const navItems: INavData[] = [
         name: 'Edit Contact',
         url: '/contact/edit-contact',
         icon: 'icon-people'
-      }
+      },
+      {
+        name: "Import",
+        url: '/import',
+        icon: 'icon-user',
+        children: [
+          {
+            name: 'Import Contact',
+            url: '/import/import',
+            icon: 'icon-people'
+          },
+        ]
+      },
     ]
   },
   {
