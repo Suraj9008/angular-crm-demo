@@ -1,27 +1,20 @@
 <div class="card p-3">
     <form>
-        <div class="card-header">
-            <h1>Loan Application</h1>
-        </div>
-       
-        <legend class="mt-5 ml-3">Work Information</legend>
-        <div class="form-group d-flex flex-row card-body">
+        <legend class="mt-5 ml-3">Loan Notification</legend>
+        <div class="form-group">
             <div class="form-check">
-                <label class="control-label" for="occupation">Current Occupation</label>
-                <input class="form-control" type="text" name="occupation" />
-            </div>
-            <div class="form-check">
-                <label class="control-label" for="company name">Employer Name</label>
-                <input class="form-control" type="text" name="company name" />
-            </div>
-            <div class="form-check">
-                <label class="control-label" for="company location">Employer Address</label>
-                <input class="form-control" type="text" name="company location" />
+                <label class="control-label" for="loan amount">Contact</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Contact</option>
+                    <option value="1">Contact 1</option>
+                    <option value="2">Contact 2</option>
+                    <option value="3">Contact 2</option>
+                  </select>
             </div>
         </div>
         <div class="form-group d-flex flex-row card-body mt-0">
             <div class="form-check mt-0">
-                <label class="control-label">Loan Type & Amount</label>
+                <label class="control-label">Loan Type</label>
                 <select class="form-select" aria-label="Default select example">
                     <option value="Commercial" selected>Commercial</option>
                     <option value="Real Estate">Real Estate</option>
@@ -31,55 +24,51 @@
             </div>
             <div class="form-check">
                 <label class="control-label" for="loan amount">Loan Amount</label>
-                <input class="form-control" type="text" name="loan amount" />
-            </div>
-        </div>
-
-        <legend class="pl-3 mt-0">Marital Status</legend>
-        <div class="form-group d-flex flex-row card-body">
-            <div class="form-check pr-2">
-                <input class="form-check-input" name="flexRadioDefault" type="radio" id="single" value="single">
-                <label class="form-check-label" for="single">Single</label>
-            </div>
-            <div class="form-check pr-2">
-                <input class="form-check-input" name="flexRadioDefault" type="radio" id="Married" value="Married">
-                <label class="form-check-label" for="Married">Married</label>
-            </div>
-            <div class="form-check pr-2">
-                <input class="form-check-input" name="flexRadioDefault" type="radio" id="Divorced" value="Divorced">
-                <label class="form-check-label" for="Divorced">Divorced</label>
+                <input class="form-control" type="text" name="loan amount" placeholder="Enter Amount"/>
             </div>
         </div>
         <legend class="pl-3 mt-0">Special Considerations</legend>
         <div class="form-group d-flex flex-row card-body">
             <div class="form-check">
-                <label class="form-check-label" for="down payment">Down Payment</label>
-                <input class="form-control" type="text" name="down payment" />
+                <label class="form-check-label" for="down payment">EMI Ammount</label>
+                <input class="form-control" type="text" name="down payment" placeholder="Enter Amount"/>
             </div>
-            <div class="form-check mt-3">
-                <div>
-                    <input type="checkbox" id="out-of-state" value="out-of-state">
-                    <label class="form-check-label" for="Out of State">Out of State Resident</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="cosigner" value="cosigner">
-                    <label class="form-check-label" for="Cosigner">Cosigner</label>
-                </div>
+           
+            <div class="form-check">
+                <label class="form-check-label" for="name">Due Date</label>
+                <input class="form-control" type="date" name="name-of-cosigner"/>
             </div>
             <div class="form-check">
-                <label class="form-check-label" for="name">Name of Cosigner</label>
-                <input class="form-control" type="text" name="name-of-cosigner"/>
+                <label class="form-check-label" for="occupation">Send Before This Date</label>
+                <input class="form-control" type="date" name="occupation" />
             </div>
+        </div>
+        <div class="form-group card-body mt-0 pt-0 d-flex flex-row">
             <div class="form-check">
-                <label class="form-check-label" for="occupation">Cosigner Occupation</label>
-                <input class="form-control" type="text" name="occupation" />
+            <label class="form-check-label" for="occupation">Select Template:</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="form-check pl-3">
+                <label class="form-check-label" for="occupation">Send Notification On:</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1" selected>Both</option>
+                    <option value="1">SMS</option>
+                    <option value="2">Email</option>
+                  </select>
+                </div>
+        </div>
+        <div class="form-group pr-3 d-flex flex-row">
+            <div class="ui-select">
+                <button type="button" class="btn btn-secondary">Cancle</button>
+            </div>
+            <div class="ui-select pl-3">
+                <button type="submit" class="btn btn-primary">Submit Form</button>
             </div>
         </div>
-        <div class="form-group card-body mt-0 pt-0">
-            <legend>Comments</legend>
-            <textarea class="form-control w-75" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        </div>
-
-        <button class="btn btn-primary ml-3" type="submit">Submit</button>
     </form>
 </div>

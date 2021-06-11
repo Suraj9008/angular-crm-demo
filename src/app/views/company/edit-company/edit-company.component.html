@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Edit Company</h1>
+    <h1>Add Company</h1>
     <div id="stepper1" class="bs-stepper form-horizontal mt-3 card">
         <div class="bs-stepper-header card-header">
             <div class="step" data-target="#test-l-1">
@@ -45,7 +45,7 @@
             <form (ngSubmit)="onSubmit()">
                 <div id="test-l-1" class="content mt-3">
                     <div class="container bootstrap snippets bootdey">
-                        <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Personal info</h5>
+                        <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Basic info</h5>
                         <hr>
                         <div class="row">
                             <!-- edit form column -->
@@ -113,12 +113,7 @@
                                     </div>
                                     <div class="form-check mt-4 pr-4">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class=" control-label">On Hold?</label>
-                                    </div>
-                                    <div class="form-check mt-4 pr-4">
-                                        <input class="form-check-input" type="radio" value="" id="flexCheckDefault"
-                                            checked>
-                                        <label class=" control-label">Primary</label>
+                                        <label class=" control-label">Bulk Mailings?</label>
                                     </div>
                                 </form>
                             </div>
@@ -149,16 +144,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group pr-5">
-                                        <label class="control-label">Phone Location</label>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">&nbsp;</label>
                                         <div class="ui-select">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option value="Phone">Phone</option>
-                                                <option value="Mobile">Mobile</option>
-                                                <option value="Fax">Fax</option>
-                                                <option value="Pager">Pager</option>
-                                                <option value="Vicemail">Vicemail</option>
-                                            </select>
+                                            <button class="btn btn-primary">Add More</button>
                                         </div>
                                     </div>
                                 </form>
@@ -187,6 +176,7 @@
                                         <label class="control-label">IM Type</label>
                                         <div class="ui-select">
                                             <select class="form-select" aria-label="Default select example">
+                                                <option value="Yahoo">WhatsApp</option>
                                                 <option value="Yahoo">Yahoo</option>
                                                 <option value="MSN">MSN</option>
                                                 <option value="AIM">AIM</option>
@@ -194,6 +184,12 @@
                                                 <option value="Jabber">Jabber</option>
                                                 <option value="Skype">Skype</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">&nbsp;</label>
+                                        <div class="ui-select">
+                                            <button class="btn btn-primary">Add More</button>
                                         </div>
                                     </div>
                                 </form>
@@ -263,7 +259,7 @@
                             <div class="d-flex flex-row form-group pr-5">
                                 <div class="ui-select pr-5">
                                     <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Marital Status</option>
+                                        <option selected>Select Address Type</option>
                                         <option value="Billing">Billing</option>
                                         <option value="Home">Home</option>
                                         <option value="Main">Main</option>
@@ -355,7 +351,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">State/Province:</label>
+                                        <label class="control-label">County:</label>
                                         <select class="form-select" aria-label="Default select example">
                                             <option selected>-N/A-</option>
                                             <option value="1">None found</option>
@@ -456,36 +452,36 @@
                                     <div class="form-group pr-5">
                                         <label class="control-label">Privacy:</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                id="flexRadioDefault2" >
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Do not phone
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Do not email
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                id="flexRadioDefault2" >
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Do not mail
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Do not sms
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Do not trade
                                             </label>
@@ -496,36 +492,36 @@
                                             <label class="control-label">Preferred Communication
                                                 Method:</label>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
                                                     id="flexRadioDefault1">
                                                 <label class="form-check-label" for="flexRadioDefault1">
                                                     Phone
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
+                                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                    id="flexRadioDefault2">
                                                 <label class="form-check-label" for="flexRadioDefault2">
                                                     Email
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
+                                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                    id="flexRadioDefault2">
                                                 <label class="form-check-label" for="flexRadioDefault2">
                                                     Postal Mail
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
+                                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                    id="flexRadioDefault2">
                                                 <label class="form-check-label" for="flexRadioDefault2">
                                                     SMS
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
+                                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                                    id="flexRadioDefault2">
                                                 <label class="form-check-label" for="flexRadioDefault2">
                                                     Fax
                                                 </label>
@@ -678,7 +674,14 @@
                             </div>
                         </form>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-5">Update Form</button>
+                    <div class="form-group pr-3 d-flex flex-row">
+                        <div class="ui-select">
+                            <button type="button" class="btn btn-secondary mt-5">Cancle</button>
+                        </div>
+                        <div class="ui-select pl-3">
+                            <button type="submit" class="btn btn-primary mt-5">Update Form</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

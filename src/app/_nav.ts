@@ -143,6 +143,11 @@ export const navItems: INavData[] = [
         url: '/integration/mail-integration',
         icon: 'icon-people'
       },
+      {
+        name: 'Sms Integration',
+        url: '/integration/sms-integration',
+        icon: 'icon-people'
+      },
     ]
   },
   {
@@ -151,7 +156,7 @@ export const navItems: INavData[] = [
     icon: 'icon-user',
     children: [
       {
-        name: 'Add Loan',
+        name: 'Loan Notification',
         url: '/loans/add-loan',
         icon: 'icon-people'
       },

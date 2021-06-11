@@ -68,7 +68,7 @@ import { ChartsModule } from 'ng2-charts';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
   ],
   providers: [
     {
