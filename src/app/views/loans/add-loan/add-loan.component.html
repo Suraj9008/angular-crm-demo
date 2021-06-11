@@ -33,16 +33,37 @@
                 <label class="form-check-label" for="down payment">EMI Ammount</label>
                 <input class="form-control" type="text" name="down payment" placeholder="Enter Amount"/>
             </div>
-           
             <div class="form-check">
-                <label class="form-check-label" for="name">Due Date</label>
-                <input class="form-control" type="date" name="name-of-cosigner"/>
+                <label class="form-check-label" for="name">Repeat Every</label>
+                <input class="form-control" type="number" min="0" max="30" name="name-of-cosigner"/>
             </div>
             <div class="form-check">
-                <label class="form-check-label" for="occupation">Send Before This Date</label>
-                <input class="form-control" type="date" name="occupation" />
+                <label class="form-check-label" for="name">&nbsp;</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">Day</option>
+                    <option value="2" selected>Month</option>
+                    <option value="3">Year</option>
+                  </select>
             </div>
         </div>
+
+        <div class="form-group card-body">
+            <div class="form-check d-flex flex-row">
+                <div class="form-check">
+                    <label class="form-check-label" for="name">Send Before</label>
+                    <input class="form-control" type="number" min="0" max="30" name="name-of-cosigner"/>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="name">&nbsp;</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">Day</option>
+                        <option value="2" selected>Month</option>
+                        <option value="3">Year</option>
+                      </select>
+                </div>
+            </div>
+        </div>
+
         <div class="form-group card-body mt-0 pt-0 d-flex flex-row">
             <div class="form-check">
             <label class="form-check-label" for="occupation">Select Template:</label>
@@ -69,6 +90,6 @@
             <div class="ui-select pl-3">
                 <button type="submit" class="btn btn-primary">Submit Form</button>
             </div>
-        </div>
+        </div> 
     </form>
 </div>
