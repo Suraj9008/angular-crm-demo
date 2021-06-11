@@ -20,10 +20,7 @@ export class AddUserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.stepper = new Stepper(document.querySelector('#stepper1'), {
-      linear: false,
-      animation: true
-    })
+   
   }
 
 }
