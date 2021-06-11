@@ -12,7 +12,7 @@ import { ForgotPasswordComponent } from './views/forgotPassword/forgot-password.
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'dashbords',
     redirectTo: 'dashboard',
     pathMatch: 'full',
   },
