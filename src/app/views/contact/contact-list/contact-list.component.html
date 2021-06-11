@@ -14,7 +14,7 @@
               Full Text Search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
           </div>
         </form>
-          <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Employee</span></a>
+          <a routerLink="/contact/add-contact" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Employee</span></a>
           
           <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i> <span>Delete</span></a>
       </div>
@@ -30,12 +30,12 @@
   <tbody>
   <tr *ngFor="let country of countries$ | async; index as i" >
     <th scope="row">{{ i + 1 }}</th>
-    <td>
-      <ngb-highlight [result]="country.name" [term]="filter.value"></ngb-highlight>
+    <td><a routerLink="/contact/view-contact-details">
+      <ngb-highlight [result]="country.name" [term]="filter.value"></ngb-highlight></a>
     </td>
-    <td><ngb-highlight [result]="country.email" [term]="filter.value"></ngb-highlight></td>
-    <td><ngb-highlight [result]="country.mobile" [term]="filter.value"></ngb-highlight></td>
-    <td><ngb-highlight [result]="country.address" [term]="filter.value"></ngb-highlight></td>
+    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.email" [term]="filter.value"></ngb-highlight></a></td>
+    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.mobile" [term]="filter.value"></ngb-highlight></a></td>
+    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.address" [term]="filter.value"></ngb-highlight></a></td>
   </tr>
   </tbody>
 </table>
