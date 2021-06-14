@@ -157,6 +157,11 @@ export const navItems: INavData[] = [
         icon: 'icon-people'
       },
       {
+        name: 'Facebook Pixel',
+        url: '/integration/fb-pixel',
+        icon: 'icon-people'
+      },
+      {
         name: 'Sms Integration',
         url: '/integration/sms-integration',
         icon: 'icon-people'

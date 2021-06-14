@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FbPixelComponent } from './fb-pixel/fb-pixel.component';
 import { MailIntegrationComponent } from './mail-integration/mail-integration.component';
 import { SmsIntegrationComponent } from './sms-integration/sms-integration.component';
 
@@ -28,6 +29,13 @@ const routes: Routes = [
           title: 'sms-integration'
         }
       },
+      {
+        path:'fb-pixel',
+        component: FbPixelComponent,
+        data: {
+          title: 'facebook-pixcel'
+        }
+      }
     ]
   }
 ];
