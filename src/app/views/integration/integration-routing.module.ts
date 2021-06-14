@@ -33,7 +33,7 @@ const routes: Routes = [
         path:'fb-pixel',
         component: FbPixelComponent,
         data: {
-          title: 'facebook-pixcel'
+          title: 'facebook-pixel'
         }
       }
     ]
