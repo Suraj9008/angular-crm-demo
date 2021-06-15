@@ -105,24 +105,24 @@ export const navItems: INavData[] = [
       {
         name: 'User Role',
         url: '/user/user-role',
-        icon: 'icon-people'
+        icon: 'icon-options'
       },
       {
         name: 'User Permission',
         url: '/user/user-permission',
-        icon: 'icon-people'
+        icon: 'icon-user-following'
       }
     ]
   },
   {
     name: 'Email',
     url: '/email',
-    icon: 'icon-user',
+    icon: 'icon-envelope',
     children: [
       {
         name: 'Send Greetings',
         url: 'email/email',
-        icon: 'icon-envelope'
+        icon: 'fa fa-commenting-o'
       },
       {
         name: 'Mail Chimp',
@@ -149,34 +149,34 @@ export const navItems: INavData[] = [
   {
     name: "Integration",
     url: '/integration',
-    icon: 'icon-user',
+    icon: 'fa fa-compress',
     children: [
       {
         name: 'Mail Integration',
         url: '/integration/mail-integration',
-        icon: 'icon-people'
+        icon: 'icon-envelope-letter'
       },
       {
         name: 'Facebook Pixel',
         url: '/integration/fb-pixel',
-        icon: 'icon-people'
+        icon: 'fa fa-facebook-square'
       },
       {
         name: 'Sms Integration',
         url: '/integration/sms-integration',
-        icon: 'icon-people'
+        icon: 'fa fa-comments-o'
       },
     ]
   },
   {
     name: "Loans",
     url: '/loans',
-    icon: 'icon-user',
+    icon: 'fa fa-money',
     children: [
       {
         name: 'Loan Notification',
         url: '/loans/add-loan',
-        icon: 'icon-people'
+        icon: 'fa fa-bell'
       },
     ]
   },
@@ -217,9 +217,9 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  {
-    divider: true
-  },
+  // {
+  //   divider: true
+  // },
   // {
   //   title: true,
   //   name: 'Components'
