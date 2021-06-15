@@ -19,59 +19,59 @@ export const navItems: INavData[] = [
   {
     name: "Company",
     url: '/company',
-    icon: 'icon-user',
+    icon: 'fa fa-building-o',
     children: [
       {
         name: 'Add Company',
         url: '/company/add-company',
-        icon: 'icon-people'
+        icon: 'fa fa-plus-square-o'
       },
       {
         name: 'Company List',
         url: '/company/company-list',
-        icon: 'icon-people'
+        icon: 'fa fa-list-alt'
       },
       {
         name: 'Edit Company',
         url: '/company/edit-company',
-        icon: 'icon-people'
+        icon: 'fa fa-pencil-square-o'
       },
       {
         name: 'View Company Details',
         url: '/company/view-company-details',
-        icon: 'icon-people'
+        icon: 'fa fa-newspaper-o'
       }
     ]
   },
   {
     name: "Contacts",
     url: '/contact',
-    icon: 'icon-user',
+    icon: 'fa fa-address-book-o',
     children: [
       {
         name: 'Add Contact',
         url: '/contact/add-contact',
-        icon: 'icon-people'
+        icon: 'fa fa-plus-square-o'
       },
       {
         name: 'Contact List',
         url: '/contact/contact-list',
-        icon: 'icon-people'
+        icon: 'fa fa-list-alt'
       },
       {
         name: 'View Contact Details',
         url: '/contact/view-contact-details',
-        icon: 'icon-people'
+        icon: 'fa fa-address-card-o'
       },
       {
         name: 'Edit Contact',
         url: '/contact/edit-contact',
-        icon: 'icon-people'
+        icon: 'fa fa-pencil-square-o'
       },
       {
         name: "Import",
         url: '/import',
-        icon: 'icon-user',
+        icon: 'fa fa-cloud-download',
         children: [
           {
             name: 'Import Contact',
@@ -90,12 +90,12 @@ export const navItems: INavData[] = [
       {
         name: 'Add User',
         url: '/user/add-user',
-        icon: 'icon-people'
+        icon: 'fa fa-user-plus'
       },
       {
         name: 'User Profile List',
         url: '/user/profile-list',
-        icon: 'icon-people'
+        icon: 'fa fa-list-alt'
       },
       {
         name: 'Edit Profile',
