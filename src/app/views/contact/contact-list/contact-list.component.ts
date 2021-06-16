@@ -9,6 +9,7 @@ interface Country {
   name: string;
   email: string;
   mobile: number;
+  workDetails:string;
   address: string;
 }
 
@@ -17,30 +18,35 @@ const COUNTRIES: Country[] = [
     name: 'Jon Doe',
     email: 'sample@gmail.com',
     mobile:  9117075200,
+    workDetails:'manager',
     address: 'Russia'
   },
   {
     name: 'Sam Doe',
     email: 'sample@gmail.com',
     mobile: 9976140512,
+    workDetails:'manager',
     address: 'Canada'
   },
   {
     name: 'Alis Maxigun',
     email: 'sample@gmail.com',
     mobile: 9629091255,
+    workDetails:'manager',
     address: 'United States'
   },
   {
     name: 'Kelis Mark',
     email: 'sample@gmail.com',
     mobile: 9596960525,
+    workDetails:'manager',
     address: 'China'
   },
   {
     name: 'Bruse Mark',
     email: 'sample@gmail.com',
     mobile: 9596960525,
+    workDetails:'manager',
     address: 'USA'
   }
 ];
@@ -62,7 +68,7 @@ function search(text: string, pipe: PipeTransform): Country[] {
 })
 export class ContactListComponent implements OnInit {
 
-  headElements = ['id', 'name', 'email', 'mobile','address'];
+  headElements = ['id', 'name', 'email', 'mobile','Work Details','address'];
 
     countries$: Observable<Country[]>;
     filter = new FormControl('');
