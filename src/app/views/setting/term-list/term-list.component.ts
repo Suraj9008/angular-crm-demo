@@ -15,7 +15,9 @@ export class TermListComponent implements OnInit {
     };
    }
   ngOnInit(): void {
-    this.data = this.TermListService.getData
-    console.log(this.data);
+    setInterval(()=>{
+      this.data = this.TermListService.showData();
+      console.log(this.data);
+    },3000)
   }
 }
