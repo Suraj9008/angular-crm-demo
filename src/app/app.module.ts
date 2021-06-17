@@ -9,7 +9,6 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
-import {TexonomyService} from './views/setting/texonomy.service'
 
 import { AppComponent } from './app.component';
 
@@ -82,10 +81,10 @@ import { ChartsModule } from 'ng2-charts';
       useClass: HashLocationStrategy,
     
     },
-    IconSetService,TexonomyService
+    
   ],
   exports:[
-    TexonomyService
+    
   ],
   bootstrap: [ AppComponent ],
 })
