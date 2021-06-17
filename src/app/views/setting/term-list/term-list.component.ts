@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TexonomyService } from '../texonomy.service'
 @Component({
   selector: 'app-term-list',
   templateUrl: './term-list.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermListComponent implements OnInit {
 
-  constructor() { }
+  data:any
+  constructor(private TermListService:TexonomyService) { }
 
   ngOnInit(): void {
+    this.data = this.TermListService.getData
+    console.log(this.data);
   }
 
 }
