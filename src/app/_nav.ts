@@ -196,6 +196,11 @@ export const navItems: INavData[] = [
         icon: 'fa fa-plus-square-o'
       },
       {
+        name: 'Tags',
+        url: '/setting/tags',
+        icon: 'fa fa-plus-square-o'
+      },
+      {
         name: 'Term List',
         url: '/setting/term-list',
         icon: 'fa fa-plus-square-o'

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TermListComponent } from '../setting/term-list/term-list.component';
 import { AddTermComponent } from './add-term/add-term.component';
+import { TagsComponent } from './tags/tags.component';
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +26,13 @@ const routes: Routes = [
         component: AddTermComponent,
         data: {
           title: 'add-term'
+        }
+      },
+      {
+        path: 'tags',
+        component: TagsComponent,
+        data: {
+          title: 'tags'
         }
       }
     ]
