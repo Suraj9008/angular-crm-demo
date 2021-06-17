@@ -9,7 +9,7 @@ export const navItems: INavData[] = [
       variant: 'info',
       text: 'NEW'
     },
-    attributes: { disabled: true },
+   
   },
   {
     title: true,
@@ -39,6 +39,11 @@ export const navItems: INavData[] = [
       {
         name: 'View Company Details',
         url: '/company/view-company-details',
+        icon: 'fa fa-newspaper-o'
+      },
+      {
+        name: 'Demo',
+        url: '/company/demo',
         icon: 'fa fa-newspaper-o'
       }
     ]
@@ -182,8 +187,20 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Setting',
-    url: '/theme/colors',
-    icon: 'icon-settings'
+    url: '/setting',
+    icon: 'icon-settings',
+    children: [
+      {
+        name: 'Add Term',
+        url: '/setting/add-term',
+        icon: 'fa fa-plus-square-o'
+      },
+      {
+        name: 'Term List',
+        url: '/setting/term-list',
+        icon: 'fa fa-plus-square-o'
+      }
+    ]
   },
   {
     name: 'Pages',

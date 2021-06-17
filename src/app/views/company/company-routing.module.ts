@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ViewContactDetailsComponent } from '../contact/view-contact-details/view-contact-details.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
 import { CompanyListComponent } from './company-list/company-list.component';
+import { DemoComponent } from './demo/demo.component';
 import { EditCompanyComponent } from './edit-company/edit-company.component';
 import { ViewCompanyDetailsComponent } from './view-company-details/view-company-details.component';
 
@@ -43,6 +43,13 @@ const routes: Routes = [
         component: ViewCompanyDetailsComponent,
         data: {
           title: 'view-company-details'
+        }
+      },
+      {
+        path:'demo',
+        component: DemoComponent,
+        data: {
+          title: 'demo'
         }
       }
     ]

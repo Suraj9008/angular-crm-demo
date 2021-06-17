@@ -84,8 +84,7 @@
                     <div class="h4 mt-3">Company Details</div>
                     <hr>
                     <div class="row pv-lg">
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-12">
                             <form class="form-horizontal ng-pristine ng-valid">
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label" for="inputContact1">Company Logo</label>
@@ -142,13 +141,33 @@
                                         <input class="form-control" id="inputContact7" type="text" value="@Social">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputContact8">Vat ID</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputContact8" type="text"
-                                            placeholder="No Company">
+                                <div class="row">
+                                    <div class="col-lg-5 p-2">
+                                      <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                          <label class="control-label help-block form-text">Select Id</label>
+                                          <div class="ui-select">
+                                              <select class="form-select" aria-label="Default select example">
+                                                  <option value="Home">Select Id</option>
+                                                  <option value="Billing">VAT ID</option>
+                                                  <option value="Main">Other</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      </div>
                                     </div>
-                                </div>
+                                    <div class="col-lg-5 p-2">
+                                      <label class="col-md-12  col-sm-12 col-xs-12 control-label help-block form-text">Username</label>
+                                      <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="text" class="form-control" value="SpeedyBecky">
+                                        <p class="help-block form-text">Your Social Media username</p>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                      <label class="col-md-12 col-sm-12 col-xs-12 control-label mt-2">&nbsp;</label>
+                                      <button type="button" class="btn btn-primary">Add</button>
+                                    </div>
+                                  </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
                                         <div class="checkbox">
