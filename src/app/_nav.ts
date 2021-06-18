@@ -9,13 +9,13 @@ export const navItems: INavData[] = [
       variant: 'info',
       text: 'NEW'
     },
-   
+
   },
   {
     title: true,
     name: 'Extras',
   },
-  
+
   {
     name: "Company",
     url: '/company',
@@ -191,20 +191,32 @@ export const navItems: INavData[] = [
     icon: 'icon-settings',
     children: [
       {
-        name: 'Add Term',
-        url: '/setting/add-term',
-        icon: 'fa fa-plus-square-o'
+        name: 'texonomy',
+        url: '/setting/texonomy',
+        icon: 'fa fa-plus-square-o',
+        children: [
+          {
+            name: 'Add Term',
+            url: '/setting/texonomy/add-term',
+            icon: 'fa fa-plus-square-o'
+          },
+          {
+            name: 'Tags',
+            url: '/setting/texonomy/tags',
+            icon: 'fa fa-plus-square-o'
+          },
+          {
+            name: 'Term List',
+            url: '/setting/texonomy/term-list',
+            icon: 'fa fa-plus-square-o'
+          },
+          {
+            name: 'Social Media',
+            url: '/setting/texonomy/social-media',
+            icon: 'fa fa-plus-square-o'
+          },
+        ]
       },
-      {
-        name: 'Tags',
-        url: '/setting/tags',
-        icon: 'fa fa-plus-square-o'
-      },
-      {
-        name: 'Term List',
-        url: '/setting/term-list',
-        icon: 'fa fa-plus-square-o'
-      }
     ]
   },
   {

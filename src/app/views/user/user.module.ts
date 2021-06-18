@@ -6,6 +6,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
+import { TexonomyService } from '../texonomy.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ProfileListComponent,
@@ -17,6 +19,8 @@ import { UserPermissionComponent } from './user-permission/user-permission.compo
   imports: [
     CommonModule,
     UserRoutingModule,
-  ]
+    FormsModule
+  ],
+  providers:[TexonomyService]
 })
 export class UserModule { }

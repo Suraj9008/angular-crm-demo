@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { TexonomyService } from '../texonomy.service'
+import { TexonomyService } from '../../../texonomy.service'
 @Component({
   selector: 'app-add-term',
   templateUrl: './add-term.component.html',
@@ -24,13 +24,11 @@ export class AddTermComponent implements OnInit {
   })
    addTerm(){
         var val = this.termForm.value;
-        let result = this.termService.addValue(val)
+        let result = this.termService.addTerms(val)
         alert("suuccessfully store")
         console.log(result);
     }
-
   ngOnInit(): void {
   }
-
 }
 

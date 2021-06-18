@@ -40,13 +40,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 
-
-
-
-
-
-
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -64,7 +57,6 @@ import { ChartsModule } from 'ng2-charts';
     IconModule,
     IconSetModule.forRoot(),
     CKEditorModule,
-
   ],
   declarations: [
     AppComponent,
@@ -79,14 +71,9 @@ import { ChartsModule } from 'ng2-charts';
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
-    
     },
-    
   ],
-  exports:[
-    
-  ],
-  bootstrap: [ AppComponent ],
+  exports: [],
+  bootstrap: [AppComponent],
 })
-
 export class AppModule { }
