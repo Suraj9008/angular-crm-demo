@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  exports:[TexonomyService],
+  exports:[],
   providers:[TexonomyService]
 })
 export class SettingModule { }
