@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TexonomyRoutingModule } from './texonomy-routing.module';
+import { TexonomyRoutingModule } from './taxonomy-routing.module';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { TermListComponent } from './term-list/term-list.component';
 import { TagsComponent } from './tags/tags.component';

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TexonomyService } from '../../../texonomy.service'
+import { TaxonomyService } from '../../../taxonomy.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-term-list',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class TermListComponent implements OnInit {
   data:any
 
-  constructor(private TermListService:TexonomyService,private router: Router) {
+  constructor(private TermListService:TaxonomyService,private router: Router) {
     this.router.routeReuseStrategy.shouldReuseRoute = function() {
       return false;
     };

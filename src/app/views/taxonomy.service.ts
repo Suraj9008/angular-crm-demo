@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class TexonomyService {
+export class TaxonomyService {
   term = [];
   socialMedia = [];
   getTerm: any

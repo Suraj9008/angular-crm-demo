@@ -4,7 +4,7 @@ import { SettingRoutingModule } from './setting-routing.module';
 
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import { TexonomyService } from '../texonomy.service'
+import { TaxonomyService } from '../taxonomy.service'
 import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [],
@@ -17,6 +17,6 @@ import { HttpClientModule } from '@angular/common/http'
     HttpClientModule
   ],
   exports:[],
-  providers:[TexonomyService]
+  providers:[TaxonomyService]
 })
 export class SettingModule { }

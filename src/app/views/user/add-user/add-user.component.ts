@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';  
 import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms'
-import { TexonomyService } from '../../texonomy.service'
+import { TaxonomyService } from '../../taxonomy.service'
 
 @Component({
   selector: 'app-add-user',
@@ -13,7 +13,7 @@ export class AddUserComponent implements OnInit{
   media: any  
   productForm: FormGroup;  
      
-  constructor(private socialMedia:TexonomyService ,private fb:FormBuilder)
+  constructor(private socialMedia:TaxonomyService ,private fb:FormBuilder)
 
   { 
     this.productForm = this.fb.group({  

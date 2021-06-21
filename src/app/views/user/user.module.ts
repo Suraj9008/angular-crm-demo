@@ -6,7 +6,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
-import { TexonomyService } from '../texonomy.service';
+import { TaxonomyService} from '../taxonomy.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -22,6 +22,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers:[TexonomyService]
+  providers:[TaxonomyService]
 })
 export class UserModule { }

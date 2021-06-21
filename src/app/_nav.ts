@@ -191,28 +191,28 @@ export const navItems: INavData[] = [
     icon: 'icon-settings',
     children: [
       {
-        name: 'texonomy',
-        url: '/setting/texonomy',
+        name: 'taxonomy',
+        url: '/setting/taxonomy',
         icon: 'fa fa-plus-square-o',
         children: [
           {
             name: 'Add Term',
-            url: '/setting/texonomy/add-term',
+            url: '/setting/taxonomy/add-term',
             icon: 'fa fa-plus-square-o'
           },
           {
             name: 'Tags',
-            url: '/setting/texonomy/tags',
+            url: '/setting/taxonomy/tags',
             icon: 'fa fa-plus-square-o'
           },
           {
             name: 'Term List',
-            url: '/setting/texonomy/term-list',
+            url: '/setting/taxonomy/term-list',
             icon: 'fa fa-plus-square-o'
           },
           {
             name: 'Social Media',
-            url: '/setting/texonomy/social-media',
+            url: '/setting/taxonomy/social-media',
             icon: 'fa fa-plus-square-o'
           },
         ]

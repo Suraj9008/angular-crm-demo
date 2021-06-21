@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { TexonomyService } from '../../../texonomy.service'
+import { TaxonomyService } from '../../../taxonomy.service'
 @Component({
   selector: 'app-social-media',
   templateUrl: './social-media.component.html',
@@ -14,7 +14,7 @@ export class SocialMediaComponent implements OnInit {
   url: any;
   publish: any;
 
-  constructor(private termService: TexonomyService) { }
+  constructor(private termService: TaxonomyService) { }
 
   socialMediaForm = new FormGroup({
     accountName: new FormControl(''),
