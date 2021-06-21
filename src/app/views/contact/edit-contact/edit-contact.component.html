@@ -58,9 +58,10 @@
                                         <label class="control-label">Prefix:</label>
                                         <div class="ui-select">
                                             <select class="form-select" aria-label="Default select example">
-                                                <option value="Mrs">Mrs.</option>
-                                                <option value="Ms">Ms.</option>
                                                 <option value="Mr">Mr.</option>
+                                                <option value="Ms">Ms.</option>
+                                                <option value="Mrs">Mrs.</option>
+                                                <option value="Dr">Miss.</option>
                                                 <option value="Dr">Dr.</option>
                                             </select>
                                         </div>
@@ -96,6 +97,61 @@
                                     </div>
                                 </form>
                             </div>
+                            <div class="form-group d-flex flex-row">
+                                <div class="form-group pr-5">
+                                    <label class=" control-label">Preferred Name:</label>
+                                    <div class="">
+                                        <input class="form-control" type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group pr-5">
+                                    <label for="exampleInputEmail1" class="form-label pr-3">
+                                        Gender</label>
+                                    <div class="form-check pr-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Female
+                                        </label>
+                                    </div>
+                                    <div class="form-check pr-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group pr-5">
+                                    <label for="exampleInputEmail1" class="form-label pr-3">
+                                        Birth Date</label>
+                                    <input class="form-control" type="date" value="" id="example-date-input">
+                                </div>
+                                <div class="form-group pr-5">
+                                    <label class=" control-label">Select Your Id Type:</label>
+                                    <div class="">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="Parent">Personal Id.</option>
+                                            <option value="Staff">Company Id.</option>
+                                            <option value="Student">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group pr-5">
+                                    <label class="control-label">Enter Id No:</label>
+                                    <div class="">
+                                        <input class="form-control" type="text" value="">
+                                        <p class="help-block form-text">Note:Alpha Numeric</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="personal-info">
                                 <form class="d-flex flex-row form-horizontal" role="form">
                                     <div class="form-group pr-5">
@@ -116,12 +172,6 @@
                                     </div>
                                     <div class="form-group pr-5">
                                         <label class="control-label">Job Title:</label>
-                                        <div class="">
-                                            <input class="form-control" type="text" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group pr-5">
-                                        <label class=" control-label">Nickname:</label>
                                         <div class="">
                                             <input class="form-control" type="text" value="">
                                         </div>
@@ -313,47 +363,6 @@
                         <form class="form-horizontal" role="form">
                             <div class="form-group d-flex flex-row">
                                 <div class="form-group pr-5">
-                                    <label for="exampleInputEmail1" class="form-label pr-3">
-                                        Gender</label>
-                                    <div class="form-check pr-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Female
-                                        </label>
-                                    </div>
-                                    <div class="form-check pr-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Male
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Other
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group pr-5">
-                                    <label for="exampleInputEmail1" class="form-label pr-3">
-                                        Birth Date</label>
-                                    <input class="form-control" type="date" value="" id="example-date-input">
-                                </div>
-                                <div class="form-group pr-5 mt-3">
-                                    <div class="form-check mt-3">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckCheckedDisabled">
-                                        <label class="form-check-label" for="flexCheckCheckedDisabled">
-                                            Contact is Deceased
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group d-flex flex-row">
-                                <div class="form-group pr-5">
                                     <label class="control-label">Most Important Issue:</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
@@ -423,10 +432,11 @@
                                     <div class="form-check pr-5">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
-                                            Primary location for this contact
+                                            <!-- Primary location for this contact -->
+                                            Copy Current Address
                                         </label>
                                     </div>
-                                    <div class="form-check pr-5">
+                                    <!-- <div class="form-check pr-5">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                             Billing location for this contact
@@ -437,7 +447,7 @@
                                         <label class="form-check-label" for="flexCheckDefault">
                                             Use another contact's address
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="personal-info">
@@ -449,35 +459,25 @@
                                         </div>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">Supplemental Address 1:</label>
+                                        <label class="control-label">Unit No:</label>
                                         <div class="form-group">
                                             <input class="form-control" type="text" value="">
                                         </div>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">Supplemental Address 2:</label>
+                                        <label class="control-label">Street No</label>
                                         <div class="form-group">
                                             <input class="form-control" type="text" value="">
                                         </div>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">Supplemental Address 3:</label>
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" value="">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="personal-info">
-                                <form class="d-flex flex-row form-horizontal" role="form">
-                                    <div class="form-group pr-5">
-                                        <label class="control-label">City:</label>
+                                        <label class="control-label">Street Name:</label>
                                         <div class="form-group">
                                             <input class="form-control" type="text" value="">
                                         </div>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">Postal Code:</label>
+                                        <label class="control-label">Street Type:</label>
                                         <div class="form-group">
                                             <input class="form-control" type="text" value="">
                                         </div>
@@ -496,6 +496,15 @@
                                         </select>
                                     </div>
                                     <div class="form-group pr-5">
+                                        <label class="control-label">Suburb/Town</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">India</option>
+                                            <option value="2">Amarica</option>
+                                            <option value="3">China</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pr-5">
                                         <label class="control-label">State/Province:</label>
                                         <select class="form-select" aria-label="Default select example">
                                             <option selected>-N/A-</option>
@@ -503,10 +512,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group pr-5">
-                                        <label class="control-label">Latitude, Longitude:</label>
-                                        <div class="form-group d-flex flex-row form-horizontal">
-                                            <input class="form-control" type="text">&nbsp;<input class="form-control"
-                                                type="text">
+                                        <label class="control-label">Postal Code:</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" value="">
                                         </div>
                                     </div>
                                 </form>
@@ -767,9 +775,9 @@
                                     <div class="form-group w-50">
                                         <label for="exampleInputEmail1" class="form-label pr-3">
                                             Reference From</label>
-                                            <div class="">
-                                                <input class="form-control" type="text" value="">
-                                            </div>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
