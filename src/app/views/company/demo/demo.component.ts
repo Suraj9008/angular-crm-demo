@@ -1,40 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { Select2OptionData,  } from 'ng-select2';
-import { Options } from 'select2';
+import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss']
 })
-export class DemoComponent implements OnInit{
-  public exampleData: Array<Select2OptionData>;
-  public options: Options;
-
-  ngOnInit() {
-    this.exampleData = [
-      {
-        id: 'opt1',
-        text: 'Options 1'
-      },
-      {
-        id: 'opt2',
-        text: 'Options 2'
-      },
-      {
-        id: 'opt3',
-        text: 'Options 3'
-      },
-      {
-        id: 'opt4',
-        text: 'Options 4'
-      }
-    ];
-
-    this.options = {
-      multiple: true,
-      theme: 'classic',
-      closeOnSelect: false,
-      width: '300'
-    };
-  }
+export class DemoComponent{
+  name = 'Angular';  
+    
+  productForm: FormGroup;  
+     
+  constructor(private fb:FormBuilder) {  
+     
+    this.productForm = this.fb.group({  
+      name: '',  
+      quantities: this.fb.array([]) ,  
+    });  
+  }  
+    
+  quantities() : FormArray {  
+    return this.productForm.get("quantities") as FormArray  
+  }  
+     
+  newQuantity(): FormGroup {  
+    return this.fb.group({  
+      qty: '',  
+      price: '',  
+    })  
+  }  
+     
+  addQuantity() {  
+    this.quantities().push(this.newQuantity());  
+  }  
+     
+  removeQuantity(i:number) {  
+    this.quantities().removeAt(i);  
+  }  
+     
+  onSubmit() {  
+    console.log(this.productForm.value);  
+  }  
 }

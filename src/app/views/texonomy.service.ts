@@ -13,6 +13,7 @@ export class TexonomyService {
   // Social Media
   showSocialMedia(){
     this.getSocialMedia = JSON.parse(localStorage.getItem('SocialMedia'))
+    console.log(this.getSocialMedia);
     return this.getSocialMedia
   }
   addSocaialMedia(newValue){

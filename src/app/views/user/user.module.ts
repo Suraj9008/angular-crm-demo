@@ -7,7 +7,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
 import { TexonomyService } from '../texonomy.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ProfileListComponent,
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers:[TexonomyService]
 })

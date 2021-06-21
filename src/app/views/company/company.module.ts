@@ -7,7 +7,7 @@ import { EditCompanyComponent } from './edit-company/edit-company.component';
 import { ViewCompanyDetailsComponent } from './view-company-details/view-company-details.component';
 import { DemoComponent } from './demo/demo.component';
 import { NgSelect2Module } from 'ng-select2';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AddCompanyComponent,
@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     CompanyRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgSelect2Module
   ],
 })
