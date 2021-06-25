@@ -8,6 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap' ;
 import { ViewContactDetailsComponent } from './view-contact-details/view-contact-details.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatTableModule} from '@angular/material/table'
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort'
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AddContactComponent,
@@ -16,14 +24,29 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     EditContactComponent
   ],
   exports: 
-  [ContactListComponent],
+  [ContactListComponent,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule],
   imports: [
     CommonModule,
     ContactRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    FlexLayoutModule
   ],
   bootstrap: [ContactListComponent]
 })

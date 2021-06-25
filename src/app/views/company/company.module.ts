@@ -8,6 +8,15 @@ import { ViewCompanyDetailsComponent } from './view-company-details/view-company
 import { DemoComponent } from './demo/demo.component';
 import { NgSelect2Module } from 'ng-select2';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TaxonomyService } from '../taxonomy.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AddCompanyComponent,
@@ -21,7 +30,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CompanyRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelect2Module
+    NgSelect2Module,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    FlexLayoutModule
   ],
+  providers: [TaxonomyService]
 })
 export class CompanyModule { }

@@ -1,45 +1,65 @@
-
-
-<div class="container-xl">
-  <div class="table-responsive">
-      <div class="table-wrapper">
-<div class="table-title">
-  <div class="row">
-      <div class="col-sm-5">
-          <h2>Contact <b>List</b></h2>
-      </div>
-      <div class="col-sm-7 d-flex flex-row align-items-center">
-        <form class="d-flex align-items-center mt-3">
-          <div class="form-group form-inline">
-              Full Text Search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
-          </div>
-        </form>
-          <a routerLink="/contact/add-contact" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Employee</span></a>
-          
-          <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i> <span>Delete</span></a>
-      </div>
+<div class="example-header table-title row mt-4">
+  <div class="col-lg-3">
+    <h2>Contact <b>List</b></h2>
+</div>
+  <div class="col-lg-3">
   </div>
+    <div class="col-lg-6">
+      <a class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i> <span>Delete</span></a>
+      <a routerLink="/company/add-company" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Company</span></a>
+      <div class="col-lg-6">
+        <input class="form-control" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </div>
+    </div>
 </div>
-<table mdbTable class="table table-striped">
-  <thead>
-  <tr>
-    <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="newCountry" [sortBy]="headElements[i]">{{head | titlecase}} <i class="fa fa-sort" aria-hidden="true"></i>
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let country of countries$ | async; index as i" >
-    <th scope="row">{{ i + 1 }}</th>
-    <td><a routerLink="/contact/view-contact-details">
-      <ngb-highlight [result]="country.name" [term]="filter.value"></ngb-highlight></a>
-    </td>
-    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.email" [term]="filter.value"></ngb-highlight></a></td>
-    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.mobile" [term]="filter.value"></ngb-highlight></a></td>
-    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.workDetails" [term]="filter.value"></ngb-highlight></a></td>
-    <td><a routerLink="/contact/view-contact-details"><ngb-highlight [result]="country.address" [term]="filter.value"></ngb-highlight></a></td>
-  </tr>
-  </tbody>
-</table>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> ID </b></mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Name</b> </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}}% </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Phone No </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.phone"> {{row.phone}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="workDetails">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.mail"> {{row.workDetails}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Address </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.address}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
-</div>
-</div>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

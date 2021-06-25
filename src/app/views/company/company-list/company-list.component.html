@@ -1,128 +1,65 @@
-<div class="container-xl">
-    <div class="table-responsive">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <h2>Company <b>List</b></h2>
-                    </div>
-                    <div class="col-sm-7 d-flex flex-row align-items-center">
-                        <form class="d-flex align-items-center mt-3">
-                          <div class="form-group form-inline">
-                              Full Text Search: <input class="form-control ml-2" type="text"/>
-                          </div>
-                        </form>
-                          <a routerLink="/company/add-company" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Company</span></a>
-                          
-                          <a class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i> <span>Delete</span></a>
-                      </div>
-                </div>
-            </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>Phone No</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><a routerLink="/company/view-company-details"><img src="http://www.photrex.com/images/Leaf%20logo.jpg" class="avatar"
-                                    alt="Avatar">Michael Holz</a></td>
-                        <td>USA</td>
-                        <td>9890359008</td>
-                        <td>sample@gmail.com</td>
-                        <td><span class="status text-success">Active</span></td>
-                        <td>
-                            <a routerLink="/company/edit-company" class="settings" title="Settings" data-toggle="tooltip"><i
-                                    class="fa fa-cog"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><a routerLink="/company/view-company-details"><img src="https://p2.zoon.ru/5/a/5d031d4730afec021d51a307_5d0a34453af57.jpg"
-                                    class="avatar" alt="Avatar"> Paula Wilson</a></td>
-                        <td>Canada</td>
-                        <td>9890359008</td>
-                        <td>sample@gmail.com</td>
-                        <td><span class="status text-success">Active</span></td>
-                        <td>
-                            <a routerLink="/company/edit-company" class="settings" title="Settings" data-toggle="tooltip"><i
-                                    class="fa fa-cog"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><a routerLink="/company/view-company-details"><img
-                                    src="https://competition.adesignaward.com/corporation/7f3ad361f2cd251eb5503ccb48aa09840d182b7c-big.jpg"
-                                    class="avatar" alt="Avatar"> Antonio Moreno</a></td>
-                        <td>China</td>
-                        <td>9890359008</td>
-                        <td>Sample@gmail.com</td>
-                        <td><span class="status text-danger">Suspended</span></td>
-                        <td>
-                            <a routerLink="/company/edit-company" class="settings" title="Settings" data-toggle="tooltip"><i
-                                    class="fa fa-cog"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><a routerLink="/company/view-company-details"><img
-                                    src="https://i.pinimg.com/originals/a4/7f/98/a47f98273fe01de1d66dd616b614a83e.jpg"
-                                    class="avatar" alt="Avatar"> Mary Saveley</a></td>
-                        <td>Russia</td>
-                        <td>9890359008</td>
-                        <td>sample@gmail.com</td>
-                        <td><span class="status text-success">Active</span></td>
-                        <td>
-                            <a routerLink="/company/edit-company" class="settings" title="Settings" data-toggle="tooltip"><i
-                                    class="fa fa-cog"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><a routerLink="/company/view-company-details"><img
-                                    src="https://i0.wp.com/logo-designer.co/wp-content/uploads/2017/10/2017-Green-Textile-rebranding-Signet-Mills-logo-design-3.png"
-                                    class="avatar" alt="Avatar"> Martin Sommer</a></td>
-                        <td>Germany</td>
-                        <td>9890359008</td>
-                        <td>sample@gmail.com</td>
-                        <td><span class="status text-warning">Inactive</span></td>
-                        <td>
-                            <a routerLink="/company/edit-company" class="settings" title="Settings" data-toggle="tooltip"><i
-                                    class="fa fa-cog"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="text-light page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="example-header table-title row mt-4">
+    <div class="col-lg-3">
+      <h2>Contact <b>List</b></h2>
+  </div>
+    <div class="col-lg-3">
     </div>
-</div>
+      <div class="col-lg-6">
+        <a class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i> <span>Delete</span></a>
+        <a routerLink="/company/add-company" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i><span>Add New Company</span></a>
+        <div class="col-lg-6">
+          <input class="form-control" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </div>
+      </div>
+  </div>
+  
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> ID </b></mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Name</b> </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name}}% </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Country </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.country}} </mat-cell>
+      </ng-container>
+  
+      <!-- Color Column -->
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Phone No </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row" [style.color]="row.phone"> {{row.phone}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row" [style.color]="row.mail"> {{row.mail}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Status </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.status}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  
+  <!-- Copyright 2018 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

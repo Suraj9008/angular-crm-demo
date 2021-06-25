@@ -10,8 +10,8 @@ import { TaxonomyService } from '../../taxonomy.service'
  
 export class AddUserComponent implements OnInit{
   name = 'Angular'; 
-  media: any  
-  productForm: FormGroup;  
+  media: any    
+  productForm: FormGroup;
      
   constructor(private socialMedia:TaxonomyService ,private fb:FormBuilder)
 
