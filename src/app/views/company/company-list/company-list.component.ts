@@ -8,7 +8,7 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./company-list.component.scss']
 })
 export class CompanyListComponent implements OnInit {
-  displayedColumns = ['id', 'name', 'country', 'phone', 'email', 'status'];
+  displayedColumns = ['id', 'name', 'country', 'phone', 'email', 'status','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

@@ -436,16 +436,115 @@
                     <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Advance Info </h5>
                     <hr>
                     <div class="row mt-5">
-                        <form class="form-horizontal" role="form">
-                            <div class="personal-info">
-                                <form class="form-horizontal" role="form">
-                                    <div class="form-group pr-5">
-                                        <label for="exampleInputEmail1" class="form-label">
-                                            Subject</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
-                                    </div>
-                                </form>
+                        <form class="row form-horizontal" role="form">
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Foundation Day:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Unit Number" type="date"
+                                        value="">
+                                </div>
+                            </div>   
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Registered As:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Registered As" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Fields of Specialties:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Related Industry:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Related Industry" type="text"
+                                        value="">
+                                </div>
+                            </div>  
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Branches:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Number of Branches" type="number"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                        <div class="mat">
+                                            <form [formGroup]="stateForm">
+                                                <mat-form-field>
+                                                  <mat-label class="control-label">Key contact persons:</mat-label>
+                                                  <input type="text" class="form-control"
+                                                         matInput
+                                                         formControlName="stateGroup"
+                                                         required
+                                                         [matAutocomplete]="autoGroup">
+                                                    <mat-autocomplete #autoGroup="matAutocomplete">
+                                                      <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                                                        <mat-option *ngFor="let name of group.names" [value]="name">
+                                                          {{name}}
+                                                        </mat-option>
+                                                    </mat-optgroup>
+                                                  </mat-autocomplete>
+                                                </mat-form-field>
+                                              </form>
+                                        </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Human Resource Strength:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Human Resource Strength" type="number"
+                                        value="">
+                                </div>
+                            </div>   
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Tie-ups with other companies:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Tie-ups with other companies" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Associated Charities:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Associated Charities" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Social Media Circles:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Social Media Circles" type="text"
+                                        value="">
+                                </div>
+                            </div>  
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Fields of Specialties:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Other:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
                             </div>
                         </form>
                     </div>

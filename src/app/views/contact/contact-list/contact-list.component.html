@@ -50,6 +50,14 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Address </b> </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.address}} </mat-cell>
     </ng-container>
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Action </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <a class="btn btn-success" data-toggle="modal"><i class="fa fa-pencil-square-o text-light" aria-hidden="true"></i></a>
+        &nbsp;&nbsp;
+        <a class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o text-light" aria-hidden="true"></i></a> 
+      </mat-cell>
+    </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;">

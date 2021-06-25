@@ -476,17 +476,279 @@
                     </div>
                 </div>
                 <div id="test-l-2" class="content">
-                    <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Advance Info
-                    </h5>
+                    <h3 class="text-primary"><span class="glyphicon glyphicon-user"></span>Advance Info
+                    </h3>
                     <hr>
                     <div class="row mt-5">
-                        <form class="form-horizontal" role="form">
-                            <div class="personal-info">
-                                <form class="form-horizontal" role="form">
-                                
-                                </form>
+                        <form class="row form-horizontal" role="form">
+                            <div class="col-lg-4 form-group">
+                                <div class="row pl-3">
+                                    <label class="control-label">Employee Status:&nbsp;<i
+                                            class="fa fa-question-circle" data-bs-toggle="tooltip"
+                                            data-bs-placement="right"
+                                            title="Choose how you communicate with this contact, e.g. on formal or familiar terms.
+                                            Depending on the CiviCRM setup, email and postal greetings (see below) may be automatically adapted accordingly; or the information can be used in other ways.."
+                                            aria-hidden="true"></i><span
+                                            style="color: red;">*</span></label>
+                                    <div class="col-lg-5 form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Self Employed
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Salaried Employee
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="col-lg-4 form-group">
+                                <label class="control-label">Convenient Time for reaching out to you:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Registered As" type="text"
+                                        value="">
+                                </div>
                             </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Level Education:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Favorite Colour:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Favorite Colour" type="text"
+                                        value="">
+                                </div>
+                            </div>  
+                            <div class="col-lg-4 form-group">
+                                <label class="control-label">Most Preferred Holiday Destination:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Number of Branches" type="number"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Favorites Brands:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Key contact persons" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Favorite leisure time Activities:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Human Resource Strength" type="time"
+                                        value="">
+                                </div>
+                            </div>   
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Most Used Apps:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Tie-ups with other companies" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Favorite Sites:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Associated Charities" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Preferred social Media Platform:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Social Media Circles" type="text"
+                                        value="">
+                                </div>
+                            </div>  
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Native Place:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 form-group">
+                                <label class="control-label">Languages known - Read Write Speak (tick boxes):<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Favorite Niche:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 form-group">
+                                <label class="control-label">Preferred Shopping Method - Walk in Store or Online:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 form-group">
+                                <label class="control-label">Shopping websites preferred other than us:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Religion:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Food Type preferred:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Workout Type preferred:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Blood Group:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Charities Related to:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <label class="control-label">Close to heart social services:<span
+                                        style="color: red;">*</span></label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Other" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                                <div class="form-group d-flex flex-row">
+                                    <div class="form-group pr-5">
+                                        <label class="control-label"> Martial Status:</label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Marital Status</option>
+                                                <option value="Single">Single</option>
+                                                <option value="Domestic Partner">Domestic Partner</option>
+                                                <option value="Windowed">Windowed</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Marriage Anniversary Date:</label>
+                                        <div class="">
+                                            <input class="form-control" type="date" id="start" name="marriage-date"
+                                                value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group pr-3">
+                                        <label class="control-label">Family Strength:</label>
+                                        <div class="">
+                                            <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Family Strength"
+                                                value="">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Relation:</label>
+                                            <div class="">
+                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Name:</label>
+                                            <div class="">
+                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Gender:</label>
+                                            <div class="">
+                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Age:</label>
+                                            <div class="">
+                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Working or Dependent:</label>
+                                            <div class="">
+                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Phone Number:</label>
+                                            <div class="">
+                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 form-group pr-3">
+                                            <label class="control-label">Email:</label>
+                                            <div class="">
+                                                <input class="form-control" type="email" id="start" name="marriage-Strength" placeholder="Enter Email"
+                                                    value="">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
                         </form>
+
                     </div>
                     <button (click)="next()" class="btn btn-primary mt-4">Next</button>
                 </div>

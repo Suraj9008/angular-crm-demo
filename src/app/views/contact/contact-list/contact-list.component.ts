@@ -9,7 +9,7 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./contact-list.component.scss'],
 })
 export class ContactListComponent implements OnInit {
-  displayedColumns = ['id', 'name', 'email', 'phone', 'workDetails', 'address'];
+  displayedColumns = ['id', 'name', 'email', 'phone', 'workDetails', 'address','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
