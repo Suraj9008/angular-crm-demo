@@ -9,7 +9,7 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./contact-list.component.scss'],
 })
 export class ContactListComponent implements OnInit {
-  displayedColumns = ['id', 'name', 'email', 'phone', 'workDetails', 'address','action'];
+  displayedColumns = ['id', 'name', 'email', 'phone', 'workDetails', 'address','referredBy','referred','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -54,6 +54,9 @@ function createNewUser(id: number): UserData {
     phone:Phone[Math.round(Math.random() * (Phone.length - 1))],
     workDetails:workDetails[Math.round(Math.random() * (workDetails.length - 1))],
     address:Address[Math.round(Math.random() * (Address.length - 1))],
+    referredBy:ReferredBy[Math.round(Math.random() * (ReferredBy.length - 1))],
+    referred:Referred[Math.round(Math.random() * (Referred.length - 1))],
+
   };
 }
 
@@ -65,12 +68,15 @@ const Address = ['USA','India','china','japan','grees','USA','India','china','ja
 const Phone = [9890359008,9665872937,9922331178,8484871686,7030757578,8007576575,9595971696,8380848521,7325068822,7040757825];
 const Mail = ['samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com','samplemail@gmail.com'];
 const workDetails = ['manager','tester','developer','Hr','Data-Scientist','business analyst','developer','manager','tester','Data-Scientist'];
-
+const ReferredBy = ['Jon Doe','Sam Doe','Alis Maxigun','Kelis Mark']
+const Referred = ['Jon Doe','Sam Doe','Alis Maxigun','Kelis Mark']
 export interface UserData {
   id: string;
   name: string;
   email:string;
   phone:number;
   workDetails:string;
-  address:string
+  address:string;
+  referredBy:string;
+  referred:string;
 }

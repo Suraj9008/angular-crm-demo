@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { ImportComponent } from './import/import.component';
 import { ViewContactDetailsComponent } from './view-contact-details/view-contact-details.component';
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
         component: ContactListComponent,
         data: {
           title: 'contact-list'
-        }
+      }
       },
       {
         path: 'view-contact-details',
@@ -42,6 +43,13 @@ const routes: Routes = [
         component: EditContactComponent,
         data: {
           title: 'edit-contact'
+        }
+      },
+      {
+        path: 'import',
+        component: ImportComponent,
+        data: {
+          title: 'import contact'
         }
       }
     ]

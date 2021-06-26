@@ -1,23 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import Stepper from 'bs-stepper';
+import {Component,OnInit} from '@angular/core';
+
+
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.scss']
 })
 export class EditProfileComponent implements OnInit {
-
-  private stepper: Stepper;
-  next() {
-    this.stepper.next();
-  }
-
-  onSubmit() {
-    return false;
-  }
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="container-xl">
+<!-- <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
@@ -117,6 +117,98 @@
                     <li class="page-item"><a href="#" class="page-link">Next</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+  
+<div class="example-header table-title row mt-4">
+    <div class="col-lg-3">
+      <h2>User Management</h2>
+  </div>
+    <div class="col-lg-3">
+    </div>
+      <div class="col-lg-6">
+        <button class="btn btn-success bg-success text-light" (click)="addRole()"><i class="fa fa-plus" aria-hidden="true"></i>Add New Role</button>
+        <div class="col-lg-8">
+          <input class="form-control" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </div>
+      </div>
+  </div>
+  
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> ID </b></mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="userName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Template Name</b> </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.userName}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="userRole">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Category Type</b> </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.userRole}} </mat-cell>
+      </ng-container>
+  
+      <!-- Color Column -->
+      <ng-container matColumnDef="userAddress">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Module Heading </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row" [style.color]="row.phone"> {{row.userAddress}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="operation">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Operations </b> </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <a class="btn btn-success" data-toggle="modal"><i class="fa fa-pencil-square-o text-light" aria-hidden="true"></i></a>
+          &nbsp;&nbsp;
+          <a class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o text-light" aria-hidden="true"></i></a> 
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  
+  <!-- Copyright 2018 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->
+
+
+      <div id="userRole" class="modal fade docs-example-modal-sm" tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content p-5">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Add New Role</label>
+                  <select class="form-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Discription</label>
+                  <textarea type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Discription"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
         </div>
     </div>
 </div>

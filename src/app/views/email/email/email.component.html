@@ -4,15 +4,21 @@
     <h1>New Email</h1>
     <hr>
     <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">From*</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Select Email</option>
-          <option value="1">demo@gmail.com</option>
-          <option value="2">demo2@gmail.com</option>
-          <option value="3">demo3@gmail.com</option>
-        </select>
-      </div>
+<div class="form-group">
+  <label for="exampleInputPassword1">From</label>
+  <select class="js-example-basic-multiple form-select" name="states[]" multiple="multiple">
+    <optgroup label="Deptt. Names" id="types">
+      <option value="1">Private</option>
+      <option value="2">Public</option>
+      <option value="3">Govt</option>
+   </optgroup>
+   <optgroup label="Email">
+    <option value="WY">demo@gmail.com</option>
+    <option value="WY">demo1@gmail.com</option>
+    <option value="WY">demo2@gmail.com</option>
+    </optgroup>
+  </select>
+</div>
       <div class="form-group">
         <label for="exampleInputPassword1">Recipient(s)</label>
         <div class="search">
@@ -47,18 +53,18 @@
 
       <div class="form-group d-flex flex-row">
         <div class="form-group w-100">
-        <label for="exampleInputPassword1">Subject</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Tokens</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Address</option>
-          <option value="1">Address Id</option>
-          <option value="2">City</option>
-          <option value="3">Country</option>
-        </select>
-      </div>
+          <label for="exampleInputPassword1">Subject</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Tokens</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Address</option>
+            <option value="1">Address Id</option>
+            <option value="2">City</option>
+            <option value="3">Country</option>
+          </select>
+        </div>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Html Format</label>
@@ -76,11 +82,13 @@
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 Attachment(s)
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Attach File</label>
@@ -94,30 +102,32 @@
         <div class="accordion accordion-flush mt-1" id="emailFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="Schedule-head">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Schedule-email" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Schedule-email" aria-expanded="false" aria-controls="flush-collapseOne">
                 Schedule Follow-up
               </button>
             </h2>
-            <div id="Schedule-email" class="accordion-collapse collapse" aria-labelledby="Schedule-head" data-bs-parent="#emailFlushExample">
+            <div id="Schedule-email" class="accordion-collapse collapse" aria-labelledby="Schedule-head"
+              data-bs-parent="#emailFlushExample">
               <div class="accordion-body">
                 <div class="form-group d-flex flex-row">
                   <div class="form-group pr-3">
-                  <label for="exampleInputEmail1">Schedule Follow-up Activity</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecte Activity</option>
-                    <option value="1">Phone/Call</option>
-                    <option value="2">Meeting</option>
-                    <option value="3">Interview</option>
-                  </select>
-                </div>
-                <div class="form-group pr-3">
-                  <label for="exampleInputEmail1">Date</label>
-                  <input class="form-control" type="date">
-                </div>
-                <div class="form-group pr-3">
-                  <label for="exampleInputEmail1">Time</label>
-                  <input class="form-control" type="time">
-                </div>
+                    <label for="exampleInputEmail1">Schedule Follow-up Activity</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Selecte Activity</option>
+                      <option value="1">Phone/Call</option>
+                      <option value="2">Meeting</option>
+                      <option value="3">Interview</option>
+                    </select>
+                  </div>
+                  <div class="form-group pr-3">
+                    <label for="exampleInputEmail1">Date</label>
+                    <input class="form-control" type="date">
+                  </div>
+                  <div class="form-group pr-3">
+                    <label for="exampleInputEmail1">Time</label>
+                    <input class="form-control" type="time">
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Subject</label>

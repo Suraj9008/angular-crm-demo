@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
+declare var jQuery: any;
 @Component({
   selector: 'app-email',
   templateUrl:'./email.component.html',
@@ -44,6 +44,9 @@ ngOnInit() {
       const userInputHTMLElement: HTMLElement = this.userInput.nativeElement;
       userInputHTMLElement.focus();
     });
+    jQuery(document).ready(function() {
+      jQuery('.js-example-basic-multiple').select2();
+  });
   }
 
   searchQueryOnDataSource($event): void {

@@ -8,6 +8,14 @@ import { UserRoleComponent } from './user-role/user-role.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
 import { TaxonomyService} from '../taxonomy.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatTableModule} from '@angular/material/table'
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort'
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     ProfileListComponent,
@@ -20,7 +28,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     UserRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers:[TaxonomyService]
 })

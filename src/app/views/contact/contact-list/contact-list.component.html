@@ -50,6 +50,16 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Address </b> </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.address}} </mat-cell>
     </ng-container>
+    <ng-container matColumnDef="referredBy">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Referred By </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.referredBy}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="referred">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Referred </b> </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.referred}} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="action">
       <mat-header-cell *matHeaderCellDef mat-sort-header> <b> Action </b> </mat-header-cell>
       <mat-cell *matCellDef="let row">

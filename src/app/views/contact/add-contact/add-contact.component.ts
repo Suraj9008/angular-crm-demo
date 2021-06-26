@@ -159,17 +159,19 @@ export class AddContactComponent implements OnInit {
   }
 
   checkPhone() {
-
+    jQuery('#exampleModal').modal('show');
+    console.log("model show");
+    
   }
-  checkext(value) {
-    if (value == "+91") {
-      jQuery("#ms_num").attr('maxlength', '10', 'minlength', '10');
-    } else if (value == "+93") {
-      jQuery("#ms_num").attr('maxlength', '8', 'minlength', '8');
-    } else if (value == "+355") {
-      jQuery("#ms_num").attr('maxlength', '12', 'minlength', '12');
-    }
-  }
+  // checkext(value) {
+  //   if (value == "+91") {
+  //     jQuery("#ms_num").attr('maxlength', '10', 'minlength', '10');
+  //   } else if (value == "+93") {
+  //     jQuery("#ms_num").attr('maxlength', '8', 'minlength', '8');
+  //   } else if (value == "+355") {
+  //     jQuery("#ms_num").attr('maxlength', '12', 'minlength', '12');
+  //   }
+  // }
   
 
 }

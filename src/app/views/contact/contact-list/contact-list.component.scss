@@ -222,3 +222,14 @@ body {
     .modal form label {
     font-weight: normal;
     }	
+
+    .mat-column-id {
+        flex: 0 0 5%;
+    }
+    .mat-column-email {
+        flex: 0 0 15%;
+    }
+
+    .mat-column-action {
+        flex: 0 0 8%;
+    }

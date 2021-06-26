@@ -16,12 +16,14 @@ import {MatTableModule} from '@angular/material/table'
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ImportComponent } from './import/import.component';
 @NgModule({
   declarations: [
     AddContactComponent,
     ContactListComponent,
     ViewContactDetailsComponent,
-    EditContactComponent
+    EditContactComponent,
+    ImportComponent
   ],
   exports: 
   [ContactListComponent,

@@ -158,7 +158,7 @@ export class AddCompanyComponent implements OnInit {
   }
 
   checkPhone() {
-
+    jQuery('#mobile').modal('show');
   }
   checkext(value) {
     if (value == "+91") {

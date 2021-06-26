@@ -31,12 +31,6 @@
                     <span class="bs-stepper-circle">5</span>
                 </button>
             </div>
-            <div class="line"></div>
-            <div class="step" data-target="#test-l-6">
-                <button class="step-trigger">
-                    <span class="bs-stepper-circle">6</span>
-                </button>
-            </div>
         </div>
         <div class="bs-stepper-content card-body">
             <form (ngSubmit)="onSubmit()">
@@ -47,7 +41,8 @@
                                 <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Basic info</h5>
                             </div>
                             <div class="col-lg-2">
-                                <button class="btn btn-primary"><i class="fa fa-share-alt" aria-hidden="true"></i> &nbsp; Share With</button>
+                                <button class="btn btn-primary"><i class="fa fa-share-alt" aria-hidden="true"></i>
+                                    &nbsp; Share With</button>
                             </div>
                         </div>
                         <hr>
@@ -139,6 +134,7 @@
                             </div>
                             <div class="personal-info mt-4">
                                 <form class="row form-horizontal" role="form">
+                                <div class="row">
                                     <div class="col-lg-4 form-group">
                                         <label class=" control-label">Preferred Name:<span
                                                 style="color: red;">*</span></label>
@@ -147,7 +143,7 @@
                                                 value="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 form-group">
+                                    <div class="col-lg-4 form-group">
                                         <label for="exampleInputEmail1" class="form-label pr-3">
                                             Gender:<span style="color: red;">*</span></label>
                                         <div class="row pl-3">
@@ -179,8 +175,60 @@
                                             Date of Birth:<span style="color: red;">*</span></label>
                                         <input class="form-control" type="date" value="" id="example-date-input">
                                     </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-4 form-group">
+                                        <label class="control-label">Email:<span style="color: red;">*</span></label>
+                                        <div class="">
+                                            <input class="form-control" placeholder="Enter Email" type="email"
+                                                (change)="check()" value="">
+                                        </div>
+                                    </div>
                                     <div class="col-lg-2 form-group">
-                                        <label class=" control-label">Select Your Id Type:<span style="color: red;">*</span></label>
+                                        <label class=" control-label">Email Type:&nbsp;<i
+                                                class="fa fa-question-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="right"
+                                                title="You can select an existing organization record here, OR type in the name of a new organization if this person's employer is not already in your database. However, if you want this person to share their work address with their employer AND that organization doesn't exist yet - leave this field blank and use the Shared Address feature in the Address pane below to create the employer record AND enter the employer address. The 'current employer' relationship will be automatically created for you."
+                                                aria-hidden="true"></i></label>
+                                        <div class="ui-select">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Home</option>
+                                                <option value="1">Billing</option>
+                                                <option value="2">Main</option>
+                                                <option value="1">Other</option>
+                                                <option value="2">Work</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 mt-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class=" control-label">On Hold?&nbsp;<i class="fa fa-question-circle"
+                                                    data-bs-toggle="tooltip" data-bs-placement="right"
+                                                    title="This flag is most commonly used to mark an email address that is bouncing. If you are using the CiviMail component, emails that bounce excessively are automatically placed on hold and mailings are not sent to this address as long as it is marked hold. You can also set (or unset) this option manually - but remember that emails will not be sent to this address as long as it is marked 'On Hold'."
+                                                    aria-hidden="true"></i></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class=" control-label">Bulk Mailings? &nbsp;<i
+                                                    class="fa fa-question-circle" data-bs-toggle="tooltip"
+                                                    data-bs-placement="right"
+                                                    title="If you are using the CiviMail component to send mailings to contacts, this field provides additional control over which email address is used. By default, CiviMail sends mail to each contact's preferred email address. If the contact has multiple locations, then the preferred email of the primary location is used. However, if the contact prefers to have CiviMail ('bulk') mailings set to an alternate email address - check the 'Use for Bulk Mailings' box next to that email address."
+                                                    aria-hidden="true"></i> </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 mt-4">
+                                        <div class="form-check">
+                                            <button class="btn btn-primary">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-4 form-group">
+                                        <label class=" control-label">Select Your Id Type:<span
+                                                style="color: red;">*</span></label>
                                         <div class="">
                                             <select class="form-select" aria-label="Default select example">
                                                 <option value="Parent">Personal Id.</option>
@@ -190,14 +238,16 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        <label class="control-label">Enter Id No:<span style="color: red;">*</span></label>
+                                        <label class="control-label">Enter Id No:<span
+                                                style="color: red;">*</span></label>
                                         <div class="">
                                             <input class="form-control" placeholder="Enter Id No" type="text" value="">
                                         </div>
                                     </div>
                                     <div class="col-lg-4 personal-info">
                                         <div class="form-group">
-                                            <label class=" control-label">Current Employer:<span style="color: red;">*</span></label>
+                                            <label class=" control-label">Current Employer:<span
+                                                    style="color: red;">*</span></label>
                                             <div class="ui-select">
                                                 <select class="form-select" aria-label="Default select example"
                                                     placeholder="select Contact">
@@ -213,10 +263,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>    
                                 </form>
                             </div>
-                            <div class="row">
-                                
+                            <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label class="control-label">Job Title:<span style="color: red;">*</span></label>
                                     <div class="">
@@ -224,13 +274,15 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mt-3">
-                                    <label class="control-label">Additional Info:<span style="color: red;">*</span></label>
+                                    <label class="control-label">Additional Info:<span
+                                            style="color: red;">*</span></label>
                                     <div class="">
-                                        <input class="form-control" placeholder="Enter Additional Info" type="text" value="">
+                                        <input class="form-control" placeholder="Enter Additional Info" type="text"
+                                            value="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="row contact mt-4">
+                            <div class="row contact mt-5">
                                 <div class="col-lg-6 personal-info">
                                     <form class="row form-horizontal" role="form">
                                         <!-- <div class="col-sm-2 form-group">
@@ -250,16 +302,15 @@
                                                     style="color: red;">*</span></label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group mb-3">
-                                                    <button class="btn btn-outline-secondary dropdown-toggle" #mySelect
-                                                        (change)="checkext(mySelect.value)" type="button"
+                                                    <button class="btn btn-outline-secondary dropdown-toggle" #mySelect type="button"
                                                         data-bs-toggle="dropdown" aria-expanded="false">+91</button>
                                                     <ul class="dropdown-menu">
                                                         <li><a class="dropdown-item" href="+91">+91</a></li>
                                                         <li><a class="dropdown-item" href="+93">+93</a></li>
                                                         <li><a class="dropdown-item" href="+264">+264</a></li>
                                                     </ul>
-                                                    <input type="text" (change)="checkPhone()" class="form-control"
-                                                        placeholder="Enter Mobile"
+                                                    <input type="text"  class="form-control"
+                                                        placeholder="Enter Mobile" (change)="checkPhone()"
                                                         aria-label="Text input with dropdown button">
                                                 </div>
                                             </div>
@@ -332,7 +383,7 @@
                             <div class="container">
                                 <div class="row">
                                     <form class="" [formGroup]="productForm" (ngSubmit)="onSubmit()">
-                                        <h6 class="">Add Social Media</h6>
+                                        <h3 class="">Add Social Media</h3>
                                         <div class="col-lg-12" #socialField>
                                             <div class="container" formArrayName="quantities">
                                                 <div class="row">
@@ -390,8 +441,6 @@
                                                             <div class="col-md-10 col-sm-9 col-xs-12">
                                                                 <input type="url" class="form-control"
                                                                     value="https://www.linkedin.com/in/lorem">
-                                                                <p class="help-block form-text">Your Social Media
-                                                                    username</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -483,13 +532,11 @@
                         <form class="row form-horizontal" role="form">
                             <div class="col-lg-4 form-group">
                                 <div class="row pl-3">
-                                    <label class="control-label">Employee Status:&nbsp;<i
-                                            class="fa fa-question-circle" data-bs-toggle="tooltip"
-                                            data-bs-placement="right"
+                                    <label class="control-label">Employee Status:&nbsp;<i class="fa fa-question-circle"
+                                            data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="Choose how you communicate with this contact, e.g. on formal or familiar terms.
                                             Depending on the CiviCRM setup, email and postal greetings (see below) may be automatically adapted accordingly; or the information can be used in other ways.."
-                                            aria-hidden="true"></i><span
-                                            style="color: red;">*</span></label>
+                                            aria-hidden="true"></i><span style="color: red;">*</span></label>
                                     <div class="col-lg-5 form-check">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault1">
@@ -505,31 +552,28 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>   
+                            </div>
                             <div class="col-lg-4 form-group">
                                 <label class="control-label">Convenient Time for reaching out to you:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Enter Registered As" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Enter Registered As" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Level Education:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Level Education:<span style="color: red;">*</span></label>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
                                         value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Favorite Colour:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Favorite Colour:<span style="color: red;">*</span></label>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Enter Favorite Colour" type="text"
                                         value="">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="col-lg-4 form-group">
                                 <label class="control-label">Most Preferred Holiday Destination:<span
                                         style="color: red;">*</span></label>
@@ -537,10 +581,9 @@
                                     <input class="form-control" placeholder="Enter Number of Branches" type="number"
                                         value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Favorites Brands:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Favorites Brands:<span style="color: red;">*</span></label>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Enter Key contact persons" type="text"
                                         value="">
@@ -553,23 +596,21 @@
                                     <input class="form-control" placeholder="Enter Human Resource Strength" type="time"
                                         value="">
                                 </div>
-                            </div>   
+                            </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Most Used Apps:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Most Used Apps:<span style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Enter Tie-ups with other companies" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Enter Tie-ups with other companies"
+                                        type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Favorite Sites:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Favorite Sites:<span style="color: red;">*</span></label>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Enter Associated Charities" type="text"
                                         value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-3 form-group">
                                 <label class="control-label">Preferred social Media Platform:<span
                                         style="color: red;">*</span></label>
@@ -577,31 +618,26 @@
                                     <input class="form-control" placeholder="Enter Social Media Circles" type="text"
                                         value="">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Native Place:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Native Place:<span style="color: red;">*</span></label>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Enter Fields of Specialties" type="text"
                                         value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-4 form-group">
-                                <label class="control-label">Languages known:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Languages known:<span style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Favorite Niche:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Favorite Niche:<span style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-4 form-group">
                                 <label class="control-label">Preferred Shopping Method:<span
                                         style="color: red;">*</span></label>
@@ -609,184 +645,81 @@
                                     <input class="form-control" placeholder="Preferred Shopping Method" type="text"
                                         value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-4 form-group">
                                 <label class="control-label">Shopping websites preferred other than us:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Religion:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Religion:<span style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-lg-3 form-group">
                                 <label class="control-label">Food Type preferred:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
                                 <label class="control-label">Workout Type preferred:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
-                                <label class="control-label">Blood Group:<span
-                                        style="color: red;">*</span></label>
+                                <label class="control-label">Blood Group:<span style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
                                 <label class="control-label">Charities Related to:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
                             <div class="col-lg-3 form-group">
                                 <label class="control-label">Close to heart social services:<span
                                         style="color: red;">*</span></label>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Other" type="text"
-                                        value="">
+                                    <input class="form-control" placeholder="Other" type="text" value="">
                                 </div>
                             </div>
-                                <div class="form-group d-flex flex-row">
-                                    <div class="form-group pr-5">
-                                        <label class="control-label"> Martial Status:</label>
-                                        <div class="ui-select">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select Marital Status</option>
-                                                <option value="Single">Single</option>
-                                                <option value="Domestic Partner">Domestic Partner</option>
-                                                <option value="Windowed">Windowed</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group pr-3">
-                                        <label class="control-label">Marriage Anniversary Date:</label>
-                                        <div class="">
-                                            <input class="form-control" type="date" id="start" name="marriage-date"
-                                                value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group pr-3">
-                                        <label class="control-label">Family Strength:</label>
-                                        <div class="">
-                                            <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Family Strength"
-                                                value="">
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Relation:</label>
-                                            <div class="">
-                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Name:</label>
-                                            <div class="">
-                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Gender:</label>
-                                            <div class="">
-                                                <input class="form-control" type="text" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Age:</label>
-                                            <div class="">
-                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Working or Dependent:</label>
-                                            <div class="">
-                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Phone Number:</label>
-                                            <div class="">
-                                                <input class="form-control" type="number" id="start" name="marriage-Strength" placeholder="Enter Relation"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 form-group pr-3">
-                                            <label class="control-label">Email:</label>
-                                            <div class="">
-                                                <input class="form-control" type="email" id="start" name="marriage-Strength" placeholder="Enter Email"
-                                                    value="">
-                                            </div>
-                                        </div>
-                                        <hr>
-                                    </div>
-                        </form>
-
-                    </div>
-                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
-                </div>
-                <div id="test-l-3" class="content">
-                    <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Constituent Information</h5>
-                    <hr>
-                    <div class="alert alert-primary" role="alert">
-                        A simple primary alert—check it out!
-                    </div>
-                    <div class="personal-info mt-5">
-                        <form class="form-horizontal" role="form">
+                            <div class="form-group pr-5">
+                                <label class="control-label">Most Important Issue:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Education
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Environment
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Social Justice
+                                    </label>
+                                </div>
+                            </div>
                             <div class="form-group d-flex flex-row">
                                 <div class="form-group pr-5">
-                                    <label class="control-label">Most Important Issue:</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Education
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Environment
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Social Justice
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group pr-5">
-                                    <label class="control-label">Marital Status:</label>
+                                    <label class="control-label"> Martial Status:</label>
                                     <div class="ui-select">
                                         <select class="form-select" aria-label="Default select example">
                                             <option selected>Select Marital Status</option>
@@ -798,18 +731,79 @@
                                     </div>
                                 </div>
                                 <div class="form-group pr-3">
-                                    <label class="control-label">Marriage Date:</label>
+                                    <label class="control-label">Marriage Anniversary Date:</label>
                                     <div class="">
                                         <input class="form-control" type="date" id="start" name="marriage-date"
                                             value="">
                                     </div>
                                 </div>
+                                <div class="form-group pr-3">
+                                    <label class="control-label">Family Strength:</label>
+                                    <div class="">
+                                        <input class="form-control" type="number" id="start" name="marriage-Strength"
+                                            placeholder="Family Strength" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Relation:</label>
+                                    <div class="">
+                                        <input class="form-control" type="text" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Name:</label>
+                                    <div class="">
+                                        <input class="form-control" type="text" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Gender:</label>
+                                    <div class="">
+                                        <input class="form-control" type="text" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Age:</label>
+                                    <div class="">
+                                        <input class="form-control" type="number" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Working or Dependent:</label>
+                                    <div class="">
+                                        <input class="form-control" type="number" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Phone Number:</label>
+                                    <div class="">
+                                        <input class="form-control" type="number" id="start" name="marriage-Strength"
+                                            placeholder="Enter Relation" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group pr-3">
+                                    <label class="control-label">Email:</label>
+                                    <div class="">
+                                        <input class="form-control" type="email" id="start" name="marriage-Strength"
+                                            placeholder="Enter Email" value="">
+                                    </div>
+                                </div>
+                                <hr>
                             </div>
                         </form>
+
                     </div>
-                    <button (click)="next()" class="btn btn-primary mt-5">Next</button>
+                    <button (click)="next()" class="btn btn-primary mt-4">Next</button>
                 </div>
-                <div id="test-l-4" class="content">
+                <div id="test-l-3" class="content">
                     <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>
                         Address</h5>
                     <hr>
@@ -817,21 +811,19 @@
                         <div class="mat">
                             <form [formGroup]="stateForm">
                                 <mat-form-field>
-                                  <mat-label>Search Current Address:</mat-label>
-                                  <input type="text" class="form-control"
-                                         matInput
-                                         formControlName="stateGroup"
-                                         required
-                                         [matAutocomplete]="autoGroup">
+                                    <mat-label>Search Current Address:</mat-label>
+                                    <input type="text" class="form-control" matInput formControlName="stateGroup"
+                                        required [matAutocomplete]="autoGroup">
                                     <mat-autocomplete #autoGroup="matAutocomplete">
-                                      <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-                                        <mat-option *ngFor="let name of group.names" [value]="name">
-                                          {{name}}
-                                        </mat-option>
-                                    </mat-optgroup>
-                                  </mat-autocomplete>
+                                        <mat-optgroup *ngFor="let group of stateGroupOptions | async"
+                                            [label]="group.letter">
+                                            <mat-option *ngFor="let name of group.names" [value]="name">
+                                                {{name}}
+                                            </mat-option>
+                                        </mat-optgroup>
+                                    </mat-autocomplete>
                                 </mat-form-field>
-                              </form>
+                            </form>
                         </div>
                         <form class="form-horizontal" role="form">
                             <label class="control-label">Address Type:<span style="color: red;">*</span></label>
@@ -912,12 +904,12 @@
                                         <div class="col-lg-3 form-group">
                                             <label class="control-label">Select Timezone:<span
                                                     style="color: red;">*</span></label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected>Select Timezone</option>
-                                                        <option value="2">UTC-05:00 Atikokan</option>
-                                                        <option value="1">UTC-05:00 (US & Canada)</option>
-                                                        <option value="3">UTC-05:00 Los-Angeles</option>
-                                                    </select>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Timezone</option>
+                                                <option value="2">UTC-05:00 Atikokan</option>
+                                                <option value="1">UTC-05:00 (US & Canada)</option>
+                                                <option value="3">UTC-05:00 Los-Angeles</option>
+                                            </select>
                                         </div>
                                         <div class="col-lg-3 form-group">
                                             <label class="control-label">State:<span
@@ -956,7 +948,7 @@
                     </div>
                     <button (click)="next()" class="btn btn-primary mt-4">Next</button>
                 </div>
-                <div id="test-l-5" class="content">
+                <div id="test-l-4" class="content">
                     <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Communication Preferences
                     </h5>
                     <hr>
@@ -1052,9 +1044,9 @@
                                             </div>
                                             <div class="col-lg-7 orm-group">
                                                 <div class="form-group">
-                                                    <label class="control-label">Preferred Communication Method:<span style="color: red;">*</span><i
-                                                            class="fa fa-question-circle" data-bs-toggle="tooltip"
-                                                            data-bs-placement="right"
+                                                    <label class="control-label">Preferred Communication Method:<span
+                                                            style="color: red;">*</span><i class="fa fa-question-circle"
+                                                            data-bs-toggle="tooltip" data-bs-placement="right"
                                                             title="Select the preferred method(s) of communicating with this contact."
                                                             aria-hidden="true"></i></label>
                                                     <div class="form-check">
@@ -1137,7 +1129,7 @@
                     </div>
                     <button (click)="next()" class="btn btn-primary mt-4">Next</button>
                 </div>
-                <div id="test-l-6" class="content">
+                <div id="test-l-5" class="content">
                     <h5 class="text-primary"><span class="glyphicon glyphicon-user"></span>Tags
                         and Groups</h5>
                     <hr>

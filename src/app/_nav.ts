@@ -74,16 +74,9 @@ export const navItems: INavData[] = [
         icon: 'fa fa-pencil-square-o'
       },
       {
-        name: "Import",
-        url: '/import',
+        name: "Import Contact",
+        url: '/contact/import',
         icon: 'fa fa-cloud-download',
-        children: [
-          {
-            name: 'Import Contact',
-            url: '/import/import',
-            icon: 'icon-people'
-          },
-        ]
       },
     ]
   },
@@ -174,16 +167,9 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: "Loans",
-    url: '/loans',
+    name: "Sales Trekker",
+    url: '/loans/add-loan',
     icon: 'fa fa-money',
-    children: [
-      {
-        name: 'Loan Notification',
-        url: '/loans/add-loan',
-        icon: 'fa fa-bell'
-      },
-    ]
   },
   {
     name: 'Setting',
