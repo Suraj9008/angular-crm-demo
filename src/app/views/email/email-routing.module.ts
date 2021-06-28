@@ -5,6 +5,7 @@ import { TemplateComponent } from './template/template.component';
 import { NewEmailTemplateComponent } from './new-email-template/new-email-template.component';
 import { MailChimpComponent } from './mail-chimp/mail-chimp.component';
 import { TemplateListComponent } from './template-list/template-list.component';
+import { EmailLogsComponent } from './email/email-logs/email-logs.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,13 @@ const routes: Routes = [
         component: EmailComponent,
         data: {
           title: 'send-greetings'
+        }
+      },
+      {
+        path: 'email-logs',
+        component: EmailLogsComponent,
+        data: {
+          title: 'email-logs'
         }
       },
       {

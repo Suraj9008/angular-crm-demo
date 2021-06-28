@@ -123,6 +123,11 @@ export const navItems: INavData[] = [
         icon: 'fa fa-commenting-o'
       },
       {
+        name: 'Email Logs',
+        url: 'email/email-logs',
+        icon: 'fa fa-commenting-o'
+      },
+      {
         name: 'Mail Chimp',
         url: 'email/mail-chimp',
         icon: 'fa fa-pencil-square-o',
@@ -169,6 +174,11 @@ export const navItems: INavData[] = [
   {
     name: "Sales Trekker",
     url: '/loans/add-loan',
+    icon: 'fa fa-money',
+  },
+  {
+    name: "Loan Logs",
+    url: '/loans/loan-table',
     icon: 'fa fa-money',
   },
   {

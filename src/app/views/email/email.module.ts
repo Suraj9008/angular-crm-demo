@@ -18,13 +18,15 @@ import {MatTableModule} from '@angular/material/table'
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { EmailLogsComponent } from './email/email-logs/email-logs.component';
 @NgModule({
   declarations: [
     EmailComponent,
     TemplateComponent,
     NewEmailTemplateComponent,
     MailChimpComponent,
-    TemplateListComponent
+    TemplateListComponent,
+    EmailLogsComponent
   ],
   imports: [
     CommonModule,
