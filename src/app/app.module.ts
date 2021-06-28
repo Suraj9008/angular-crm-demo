@@ -9,9 +9,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
-
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 // Import containers
 import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
@@ -19,6 +19,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ForgotPasswordComponent } from './views/forgotPassword/forgot-password.component';
+import { fakeBackendProvider } from './_helpers';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -39,6 +40,7 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -58,6 +60,9 @@ import { ChartsModule } from 'ng2-charts';
     IconModule,
     IconSetModule.forRoot(),
     CKEditorModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -73,6 +78,11 @@ import { ChartsModule } from 'ng2-charts';
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
     },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        // provider used to create fake backend
+        // fakeBackendProvider
   ],
   exports: [],
   bootstrap: [AppComponent],

@@ -9,13 +9,14 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 import { ForgotPasswordComponent } from './views/forgotPassword/forgot-password.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { AuthGuard } from './_helpers';
 
 export const routes: Routes = [
-  {
-    path: 'dashbords',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '/dashboard',
+  //   redirectTo: 'dashboard',
+  // },
   {
     path: '404',
     component: P404Component,
@@ -31,11 +32,9 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'login',
+    path:'',
     component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
+    pathMatch: 'full',
   },
   {
     path: 'forgotPassword',
@@ -52,8 +51,9 @@ export const routes: Routes = [
     }
   },
   {
-    path: '',
+    path: 'default-layout',
     component: DefaultLayoutComponent,
+    canActivate:[AuthGuard],
     data: {
       title: 'Home'
     },

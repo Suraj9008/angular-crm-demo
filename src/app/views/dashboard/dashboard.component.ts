@@ -1,11 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+
+import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
+
+
+import { User } from '../../_models';
+import { UserService, AuthenticationService } from '../../_services';
 
 @Component({
   templateUrl: 'dashboard.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
+
+  currentUser: User;
+    currentUserSubscription: Subscription;
+    users: User[] = [];
+
+    constructor(
+      private authenticationService: AuthenticationService,
+      private userService: UserService
+  ) {
+      this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
+          this.currentUser = user;
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.currentUserSubscription.unsubscribe();
+  }
+
+  deleteUser(id: number) {
+    this.userService.delete(id).pipe(first()).subscribe(() => {
+        this.loadAllUsers()
+    });
+}
+
+private loadAllUsers() {
+  this.userService.getAll().pipe(first()).subscribe(users => {
+      this.users = users;
+  });
+}
 
   radioModel: string = 'Month';
 
@@ -383,6 +419,7 @@ export class DashboardComponent implements OnInit {
       this.mainChartData1.push(this.random(50, 200));
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
+      this.loadAllUsers();
     }
   }
 }
